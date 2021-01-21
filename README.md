@@ -63,7 +63,7 @@ npm test                # executes the example test suite
 To execute only those scenarios which names match a given pattern, run:
 
 ```
-npx cucumber-js --name="Several expressions"
+npx cucumber-js --name="Multiple expressions"
 ``` 
 
 Note that this technique works with partial matches, i.e. specifying `--name="expressions"` would match all the scenarios in the [example `.feature` file](features/mathjs-api/expressions.feature).

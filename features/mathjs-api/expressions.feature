@@ -1,8 +1,16 @@
 Feature: Expressions
 
+  [math.js](https://mathjs.org/) is available as a RESTful API at [api.mathjs.org](https://api.mathjs.org/).
+
+  Evaluations can be done via GET or POST requests.
+  The duration per evaluation of this free service is limited to 10 seconds,
+  with a maximum of 10,000 requests per day.
+
   Rule: One expression - one result
 
     Scenario Outline: Basic expressions
+
+      Single expression requests can be evaluated using the [GET endpoint](https://api.mathjs.org/#get).
 
       When Sandra requests evaluation of <expression>
       Then she should get <expected_result>
@@ -19,7 +27,9 @@ Feature: Expressions
 
   Rule: Multiple expressions - multiple results
 
-    Scenario: Several expressions
+    Scenario: Multiple expressions
+
+      Requests to evaluate multiple expression should be sent to the [POST endpoint](https://api.mathjs.org/#post).
 
       When Sandra requests evaluation of:
         | expression |
