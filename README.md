@@ -3,7 +3,7 @@
 [![Build Status](https://github.com/serenity-js/serenity-js-cucumber-template/workflows/build/badge.svg)](https://github.com/serenity-js/serenity-js-cucumber-template/actions)
 
 Use this [template repository](https://help.github.com/en/articles/creating-a-repository-from-a-template)
-to get started with acceptance testing your REST/HTTP APIs using [Serenity/JS](https://serenity-js.org) and [Cucumber](https://github.com/cucumber/cucumber-js).
+to get started with acceptance testing your REST/HTTP APIs using [Serenity/JS](https://serenity-js.org) and [Cucumber](https://github.com/cucumber/cucumber-js). You might also want to have a look at the [Serenity BDD reports](https://serenity-js.github.io/serenity-js-cucumber-template/) produced by this project.
 
 Learn more:
 - [Serenity/JS Website](https://serenity-js.org)
