@@ -9,7 +9,7 @@ import { Answerable, Question } from '@serenity-js/core';
  */
 export const GetApiPath = {
     for: (urlEncodedExpression: Question<string>) =>
-        Question.about(`GET /v4?expr endpoint for ${ urlEncodedExpression }`, actor =>
+        Question.about(`/v4?expr endpoint for ${ urlEncodedExpression }`, actor =>
             actor.answer(urlEncodedExpression).then(expression =>
                 `/v4?expr=${ expression }`
             ))
