@@ -21,7 +21,7 @@ jobs:
         env:
           CI: true
       - name: GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: JamesIves/github-pages-deploy-action@4.0.0
         if: matrix.node-version == '14.x'
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
