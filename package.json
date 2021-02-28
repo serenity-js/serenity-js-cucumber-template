@@ -29,7 +29,7 @@
   "homepage": "http://serenity-js.org",
   "engines": {
     "node": "^10 || ^12 || ^14",
-    "npm": "^6"
+    "npm": "^7"
   },
   "dependencies": {
     "@cucumber/cucumber": "^7.0.0",
