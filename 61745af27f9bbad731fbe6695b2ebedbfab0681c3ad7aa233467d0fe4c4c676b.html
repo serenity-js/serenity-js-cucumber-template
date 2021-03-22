@@ -148,7 +148,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [{"text":"Expressions","type":"feature","href":"61745af27f9bbad731fbe6695b2ebedbfab0681c3ad7aa233467d0fe4c4c676b.html","nodes":[],"selectable":false,"tags":["",""]}];
+            var requirementsTree = [{"text":"Expressions","type":"feature","href":"61745af27f9bbad731fbe6695b2ebedbfab0681c3ad7aa233467d0fe4c4c676b.html","nodes":[],"selectable":false,"tags":["","\u003cspan class\u003d\u0027feature-count\u0027\u003e2 scenarios\u003c/span\u003e"]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -220,7 +220,7 @@
             <a href="#"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated </span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 22-03-2021 23:54</span>
     <br style="clear:left"/>
 </div>
 
@@ -234,11 +234,31 @@
                         <div>
                             <div clas="table">
                                 <div class="row">
-                                    <div class="col-sm-12">
+                                    <div class="col-sm-8">
                                     <span>
                                             <h2><i class="fa fa-book"></i> Feature:  Expressions</h2>
                                         </span>
                                 </div>
+                                    <div class="col-sm-4">
+                                        <span class="feature-tags">
+                                                <p class="tag">
+                                                    <span class="badge tag-badge" style="background:default;">
+                                                        <i class="fa fa-tag"></i>&nbsp;<a class="tagLink"
+                                                                                          style="background:default;"
+                                                                                          href="79dd287615598460ae50101e508e5e05b703fe3cc79f4d059893bc17774989f2.html">Mathjs-Api
+                                                        (capability)</a>
+                                                    </span>
+                                                </p>
+                                                <p class="tag">
+                                                    <span class="badge tag-badge" style="background:default;">
+                                                        <i class="fa fa-tag"></i>&nbsp;<a class="tagLink"
+                                                                                          style="background:default;"
+                                                                                          href="61745af27f9bbad731fbe6695b2ebedbfab0681c3ad7aa233467d0fe4c4c676b.html">Expressions
+                                                        (feature)</a>
+                                                    </span>
+                                                </p>
+                                        </span>
+                                    </div>
                                 </div>
                                 </div>
                             </div>
@@ -275,6 +295,178 @@ with a maximum of 10,000 requests per day.
                                         <div class="col-sm-12">
 
 
+                                                  <h2>Rule: One expression - one result</h2>
+
+                                            <h3>Scenarios</h3>
+                                            <div id="toc">
+                                                <table class="table" id="toc-table">
+                                                        <tr>
+                                                            <td style="width:95%;" class="toc-title">
+                                                                <a href="#98c3717d874333b72f0004265457bbe3e8eb99f81cb85656a99b2a77f816439f" title="View scenario details" >Basic expressions</a>
+                                                                     (4 examples)
+
+                                                            </td>
+                                                            <td style="width:5%;">
+                                                                <table>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                               href="8a1d184dcc26cfafc2e29fbfbcb6b345520f73dd3fe91ce315657bb2636662ed.html"
+                                                                               title="View test results">
+                                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                                            </a>
+
+                                                                        
+                                                                        </td>
+                                                                        <td>
+                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                               href="8a1d184dcc26cfafc2e29fbfbcb6b345520f73dd3fe91ce315657bb2636662ed.html"
+                                                                               title="View test results">
+                                                                                <i class="fas fa-search-plus"></i>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                </table>
+
+                                            </div>
+
+                                            <h3>Scenario details</h3>
+
+                                                <div class="scenario-docs card" id="98c3717d874333b72f0004265457bbe3e8eb99f81cb85656a99b2a77f816439f">
+                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
+                                                        <div>
+                                                            <span class="scenario-heading">
+                                                                <a href="8a1d184dcc26cfafc2e29fbfbcb6b345520f73dd3fe91ce315657bb2636662ed.html" title="View test results">Basic expressions</a>
+                                                            </span>
+                                                            <span class="scenario-result-icon">
+                                                                
+
+                                                                    <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <div class="scenario-text">
+                                                                <i class="fa fa-info-circle"></i> Single expression requests can be evaluated using the <a href="https://api.mathjs.org/#get">GET endpoint</a>.
+                                                            </div>
+                                                            <p>When Sandra requests evaluation of {expression}</p>
+                                                            <p>Then she should get {expected_result}</p>
+                                                        <div class="examples">
+                                                            <p><p>Examples: Basic operators</p>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>expression</th><th>expected_result</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>2 + 3</td><td>5</td><td> </td></tr>
+<tr><td>2 - 3</td><td>-1</td><td> </td></tr>
+</tbody>
+</table></div>
+<p>Examples: Order of operations</p>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>expression</th><th>expected_result</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>2 * 2 + 2</td><td>6</td><td> </td></tr>
+<tr><td>2 + 2 * 2</td><td>6</td><td> </td></tr>
+</tbody>
+</table></div>
+</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                  <h2>Rule: Multiple expressions - multiple results</h2>
+
+                                            <h3>Scenarios</h3>
+                                            <div id="toc">
+                                                <table class="table" id="toc-table">
+                                                        <tr>
+                                                            <td style="width:95%;" class="toc-title">
+                                                                <a href="#c24ecea5e2813c552cc662d0a18176989ea4cc1862420a0e52f92ea27d702f6d" title="View scenario details" >Multiple expressions</a>
+
+
+                                                            </td>
+                                                            <td style="width:5%;">
+                                                                <table>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                               href="8393d3d46a2ef7b23feb9b49f128ae8acacf973ef0874214159481790cf50507.html"
+                                                                               title="View test results">
+                                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                                            </a>
+
+                                                                        
+                                                                        </td>
+                                                                        <td>
+                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                               href="8393d3d46a2ef7b23feb9b49f128ae8acacf973ef0874214159481790cf50507.html"
+                                                                               title="View test results">
+                                                                                <i class="fas fa-search-plus"></i>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                </table>
+
+                                            </div>
+
+                                            <h3>Scenario details</h3>
+
+                                                <div class="scenario-docs card" id="c24ecea5e2813c552cc662d0a18176989ea4cc1862420a0e52f92ea27d702f6d">
+                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
+                                                        <div>
+                                                            <span class="scenario-heading">
+                                                                <a href="8393d3d46a2ef7b23feb9b49f128ae8acacf973ef0874214159481790cf50507.html" title="View test results">Multiple expressions</a>
+                                                            </span>
+                                                            <span class="scenario-result-icon">
+                                                                
+
+                                                                    <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <div class="scenario-text">
+                                                                <i class="fa fa-info-circle"></i> Requests to evaluate multiple expression should be sent to the <a href="https://api.mathjs.org/#post">POST endpoint</a>.
+                                                            </div>
+                                                            <p>Before</p>
+                                                            <p><p>When Sandra requests evaluation of:</p>
+<table>
+<thead>
+<tr><th>expression</th></tr>
+</thead>
+<tbody>
+<tr><td>2 + 3</td></tr>
+<tr><td>2 - 3</td></tr>
+<tr><td>2 * 2 + 2</td></tr>
+<tr><td>2 + 2 * 2</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>Then she should get following results:</p>
+<table>
+<thead>
+<tr><th>expected_result</th></tr>
+</thead>
+<tbody>
+<tr><td>5</td></tr>
+<tr><td>-1</td></tr>
+<tr><td>6</td></tr>
+<tr><td>6</td></tr>
+</tbody>
+</table>
+</p>
+                                                        <div class="examples">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -283,7 +475,41 @@ with a maximum of 10,000 requests per day.
                             <div id="results" class="tab-pane fade">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-sm-12">
+                                        <div class="col-sm-4">
+
+                                            <div style="width:300px;" class="chart-container automated-and-manual-results">
+                                                <div class="ct-chart ct-square"></div>
+                                            </div>
+                                            <script>
+
+                                                var labels = ['100%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+                                                // Our series array that contains series objects or in this case series data arrays
+
+                                                var series = [{meta: 'Passing tests (automated)', value: 5}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+
+                                                // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
+                                                // as you saw in the previous example
+                                                var options = {
+                                                    width: 350,
+                                                    height: 300
+                                                };
+
+                                                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                                                    new Chartist.Pie('.ct-chart', {
+                                                        series: series,
+                                                        labels: labels,
+                                                    }, {
+                                                        donut: true,
+                                                        donutWidth: 60,
+                                                        donutSolid: true,
+                                                        startAngle: 270,
+                                                        showLabel: true
+                                                    }, options);
+                                                });
+
+                                            </script>
+                                        </div>
+                                        <div class="col-sm-8">
 
                                         <table class="table">
                                             <thead>
@@ -296,11 +522,12 @@ with a maximum of 10,000 requests per day.
                                             </thead>
                                             <tbody>
                                             <tr>
-                                                                    <td class="aggregate-result-count"><i
-                                                                            class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing
+                                                                    <td class="aggregate-result-count">
+                                                                        <a href="95dc93f20cd4f6760e63ac666dfeec1a2d11cb243ea87c425e029c22633208aa.html"><i
+                                                                                class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing</a>
                                                                     </td>
-                                                <td class="automated-stats">0</td>
-                                                <td class="automated-stats"> </td>
+                                                <td class="automated-stats">5</td>
+                                                <td class="automated-stats">100%</td>
                                             </tr>
                                             <tr>
                                                                     <td class="aggregate-result-count"><i
@@ -354,7 +581,7 @@ with a maximum of 10,000 requests per day.
                                             </tr>
                                             <tr class="summary-stats">
                                                 <td class="aggregate-result-count">Total</td>
-                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats">5</td>
                                                 <td class="automated-stats"></td>
                                             </tr>
                                             </tbody>
@@ -376,11 +603,11 @@ with a maximum of 10,000 requests per day.
                                                     </thead>
                                                     <tbody>
                                                     <tr>
-                                                        <td>0ms</td>
-                                                        <td>0ms</td>
-                                                        <td>0ms</td>
-                                                        <td>0ms</td>
-                                                        <td>0ms</td>
+                                                        <td>345ms</td>
+                                                        <td>273ms</td>
+                                                        <td>49ms</td>
+                                                        <td>100ms</td>
+                                                        <td>172ms</td>
                                                     </tr>
                                                     </tbody>
                                                 </table>
@@ -392,7 +619,44 @@ with a maximum of 10,000 requests per day.
                                             <div class="col-sm-12">
                                                 <h3><i class="fas fa-cogs"></i> Automated Tests</h3>
 
-                                            No automated tests were executed
+                                            <table class="scenario-result-table table" id="scenario-results">
+                                                <thead>
+                                                <tr>
+                                                    <th class="test-name-column">Scenario</th>
+                                                    <th>Steps</th>
+                                                    <th>Start Time</th>
+                                                    <th>Duration</th>
+                                                    <th>Result</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="8a1d184dcc26cfafc2e29fbfbcb6b345520f73dd3fe91ce315657bb2636662ed.html">Basic expressions</a>
+                                                               (4 examples)
+                                                    </td>
+                                                    <td>2</td>
+                                                    <td>23:54:39</td>
+                                                    <td>272ms</td>
+                                                    <td>
+                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                style="display:none">SUCCESS</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="8393d3d46a2ef7b23feb9b49f128ae8acacf973ef0874214159481790cf50507.html">Multiple expressions</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>23:54:39</td>
+                                                    <td>073ms</td>
+                                                    <td>
+                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                style="display:none">SUCCESS</span>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
 
                                             </div>
                                         </div>
