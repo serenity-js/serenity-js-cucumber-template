@@ -36,7 +36,7 @@
     "@serenity-js/assertions": "^2.26.0",
     "@serenity-js/console-reporter": "^2.26.0",
     "@serenity-js/core": "^2.26.0",
-    "@serenity-js/cucumber": "^2.26.0",
+    "@serenity-js/cucumber": "^2.26.1",
     "@serenity-js/rest": "^2.26.0",
     "@serenity-js/serenity-bdd": "^2.26.0",
     "@types/node": "^14.14.35",
