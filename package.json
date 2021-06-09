@@ -28,7 +28,7 @@
   },
   "homepage": "http://serenity-js.org",
   "engines": {
-    "node": "^10 || ^12 || ^14",
+    "node": "^12 || ^14 || ^16",
     "npm": "^6 || ^7"
   },
   "dependencies": {
