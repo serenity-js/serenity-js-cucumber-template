@@ -14,7 +14,7 @@ Learn more:
 ## Prerequisites
 
 To use this project, you'll need:
-- Node.js, a Long-Term Support (LTS) release version 10 or later - [download](https://nodejs.org/en/)
+- Node.js, a Long-Term Support (LTS) release version 12 or later - [download](https://nodejs.org/en/)
 - Java Runtime Environment (JRE) or a Java Development Kit (JDK) version 8 or later - [download](https://adoptopenjdk.net/)
 
 Follow the [installation instructions](https://serenity-js.org/handbook/integration/runtime-dependencies.html) to help you verify your setup.
