@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig",
+  "include": [
+    "src/**/*.ts",
+    "features/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

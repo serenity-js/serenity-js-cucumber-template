@@ -1,7 +1,8 @@
-import { actorCalled, actorInTheSpotlight, ArtifactArchiver, configure, engage } from '@serenity-js/core';
-import { SerenityBDDReporter } from '@serenity-js/serenity-bdd';
 import { Before, BeforeAll, defineParameterType } from '@cucumber/cucumber';
 import { ConsoleReporter } from '@serenity-js/console-reporter';
+import { actorCalled, actorInTheSpotlight, ArtifactArchiver, configure, engage } from '@serenity-js/core';
+import { SerenityBDDReporter } from '@serenity-js/serenity-bdd';
+
 import { Actors } from '../../src';
 
 /**
