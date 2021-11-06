@@ -5,6 +5,11 @@
   "rangeStrategy": "bump",
   "packageRules": [
     {
+      "packagePatterns": ["^eslint$", "^eslint-plugin", "^@typescript-eslint"],
+      "groupName": "ESLint",
+      "automerge": false
+    },
+    {
       "packagePatterns": ["^@serenity-js"],
       "groupName": "Serenity/JS",
       "automerge": true
