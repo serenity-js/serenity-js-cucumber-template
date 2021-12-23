@@ -40,7 +40,7 @@
     "@serenity-js/cucumber": "^2.32.5",
     "@serenity-js/rest": "^2.32.5",
     "@serenity-js/serenity-bdd": "^2.32.5",
-    "@types/node": "^16.11.16",
+    "@types/node": "^16.11.17",
     "@typescript-eslint/eslint-plugin": "^5.8.0",
     "@typescript-eslint/parser": "^5.8.0",
     "eslint": "^8.5.0",
