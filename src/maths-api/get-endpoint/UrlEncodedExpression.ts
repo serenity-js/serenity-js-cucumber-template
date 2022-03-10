@@ -10,7 +10,7 @@ import { escape } from 'querystring';
  * @see https://serenity-js.org/handbook/thinking-in-serenity-js/screenplay-pattern.html
  */
 export const UrlEncodedExpression = {
-    from: (expression: string): Question<string> =>
+    from: (expression: string): Question<Promise<string>> =>
         Question.about(`URL-encoded expression: ${ expression }`, actor => {
             return escape(removeWhitespace(expression));
         }),
