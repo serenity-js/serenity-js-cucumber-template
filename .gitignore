@@ -1,6 +1,10 @@
 # IntelliJ
 .idea
 
+# vscode
+.vscode
+
+
 # Node
 node_modules
 *.log
