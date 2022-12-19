@@ -29,7 +29,7 @@
   },
   "homepage": "http://serenity-js.org",
   "engines": {
-    "node": "^12 || ^14 || ^16",
+    "node": "^12 || ^14 || ^16 || ^18.0.0",
     "npm": "^6 || ^7 || ^8.0.0"
   },
   "dependencies": {
@@ -40,7 +40,7 @@
     "@serenity-js/cucumber": "^2.33.10",
     "@serenity-js/rest": "^2.33.10",
     "@serenity-js/serenity-bdd": "^2.33.10",
-    "@types/node": "^16.18.10",
+    "@types/node": "^18.11.17",
     "@typescript-eslint/eslint-plugin": "^5.47.0",
     "@typescript-eslint/parser": "^5.47.0",
     "eslint": "^8.30.0",
