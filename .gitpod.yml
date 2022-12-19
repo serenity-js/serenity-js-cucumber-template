@@ -15,13 +15,13 @@ tasks:
 
   - name: 'Serenity Reports'
     init: gp sync-await installation
-    command: >
-      mkdir -p target/site/serenity &&
+    command: |
+      mkdir -p target/site/serenity
       npx http-server -p 8080 target/site/serenity/
 
   - name: 'Welcome'
     init: gp sync-await installation
-    command: >
+    command: |
       npm test
       echo "To view Serenity Reports, visit:"
       gp url 8080
