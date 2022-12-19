@@ -4,17 +4,14 @@ ports:
   - port: 8080
     onOpen: notify
     visibility: public
-  - port: 8181
-    onOpen: notify
-    visibility: public
 
 tasks:
   - name: 'Install'
     init: |
-        nvm install
-        nvm use
-        npm ci
-        gp sync-done installation
+      nvm install
+      nvm use
+      npm ci
+      gp sync-done installation
 
   - name: 'Test'
     init: gp sync-await installation
