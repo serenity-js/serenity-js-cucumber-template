@@ -1,8 +1,7 @@
 {
   "files.autoSave": "onFocusChange",
   "workbench.startupEditor": "readme",
-  "gitlens.showWelcomeOnInstall": false,
-  "gitlens.showWhatsNewAfterUpgrades": false,
+  "workbench.tree.indent": 12,
   "cucumber.features": [
     "features/**/*.feature"
   ],
