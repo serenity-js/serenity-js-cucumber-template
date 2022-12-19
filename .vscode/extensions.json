@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "ms-playwright.playwright",
+    "EditorConfig.EditorConfig",
+    "CucumberOpen.cucumber-official"
+  ],
+  "unwantedRecommendations": []
+}
