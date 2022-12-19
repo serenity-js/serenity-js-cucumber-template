@@ -1,6 +1,6 @@
 import { Before, BeforeAll, defineParameterType } from '@cucumber/cucumber';
 import { actorCalled, actorInTheSpotlight, configure, engage } from '@serenity-js/core';
-import { resolve } from 'path';
+import path from 'path';
 
 import { Actors } from '../../src';
 
@@ -15,7 +15,7 @@ BeforeAll(function () {
         crew: [
             '@serenity-js/console-reporter',
             '@serenity-js/serenity-bdd',
-            [ '@serenity-js/core:ArtifactArchiver', { outputDirectory: resolve(__dirname, `../../target/site/serenity`) } ],
+            [ '@serenity-js/core:ArtifactArchiver', { outputDirectory: path.resolve(__dirname, `../../target/site/serenity`) } ],
             // '@serenity-js/core:StreamReporter',
         ]
     });
