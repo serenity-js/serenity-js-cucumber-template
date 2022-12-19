@@ -26,7 +26,7 @@ Learn more:
 >
 > ## Stay up to date!
 >
-> - To get notified when Serenity/JS v3 is available and when new tutorials are released, [follow Serenity/JS on LinkedIn](https://www.linkedin.com/company/serenity-js) and subscribe to [@sernity-js on YouTube](https://www.youtube.com/@serenity-js)!
+> - To get notified when Serenity/JS v3 is available and when new tutorials are released, follow [Serenity/JS on LinkedIn](https://www.linkedin.com/company/serenity-js) and subscribe to [@serenity-js on YouTube](https://www.youtube.com/@serenity-js)!
 > - To find out more about what's left to do for the v3 launch, check out our [project board](https://github.com/serenity-js/serenity-js/milestone/1).
 >
 > And if you find Serenity/JS useful, learn how becoming a [GitHub Sponsor](https://github.com/sponsors/serenity-js) can help both you and this project!
