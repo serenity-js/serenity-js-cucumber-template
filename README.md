@@ -16,6 +16,24 @@ Learn more:
 - [Serenity/JS Tutorial](https://serenity-js.org/handbook/thinking-in-serenity-js/index.html)
 - [Serenity/JS API Docs](https://serenity-js.org/modules)
 
+> **Note**
+>
+> ## Serenity/JS v3 is coming soon!
+>
+> The default [`main` branch](https://github.com/serenity-js/serenity-js-cucumber-template/tree/main) of this Serenity/JS repository contains code for the upcoming Serenity/JS v3 release.
+>
+> All the public Serenity/JS APIs are now stable and unlikely to change much before the final release. You're welcome to go through the [v3 migration guide](https://serenity-js.org/handbook/release-notes/serenity-js-3.html), experiment with the new version, and ask any questions you might have about the migration on the [Serenity/JS Community Gitter Chat](https://gitter.im/serenity-js/Lobby).
+>
+> ## Stay up to date!
+>
+> - To get notified when Serenity/JS v3 is available and when new tutorials are released, [follow Serenity/JS on LinkedIn](https://www.linkedin.com/company/serenity-js) and subscribe to [@sernity-js on YouTube](https://www.youtube.com/@serenity-js)!
+> - To find out more about what's left to do for the v3 launch, check out our [project board](https://github.com/serenity-js/serenity-js/milestone/1).
+>
+> And if you find Serenity/JS useful, learn how becoming a [GitHub Sponsor](https://github.com/sponsors/serenity-js) can help both you and this project!
+>
+> ## Where's Serenity/JS v2 codebase?
+> Check out the [`2.x` branch](https://github.com/serenity-js/serenity-js-cucumber-template/tree/2.x)
+
 ## Usage
 
 This repository is a GitHub template. You can use it to [create a new GitHub repository](https://help.github.com/en/articles/creating-a-repository-from-a-template), [clone it to your computer](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
