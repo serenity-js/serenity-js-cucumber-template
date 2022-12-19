@@ -15,7 +15,7 @@ BeforeAll(function () {
         crew: [
             '@serenity-js/console-reporter',
             '@serenity-js/serenity-bdd',
-            [ '@serenity-js/core:ArtifactArchiver', { outputDirectory: resolve(__dirname, `target/site/serenity`) } ],
+            [ '@serenity-js/core:ArtifactArchiver', { outputDirectory: resolve(__dirname, `../../target/site/serenity`) } ],
             // '@serenity-js/core:StreamReporter',
         ]
     });
