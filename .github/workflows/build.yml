@@ -2,9 +2,9 @@ name: build
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
     types: [ opened, synchronize ]
 
 jobs:
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 12.x, 14.x, 16.x ]
+        node-version: [ 14.x, 16.x, 18.x ]
 
     steps:
       - uses: actions/checkout@v3
@@ -20,15 +20,18 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm ci
+      - name: Install Node Modules (root)
+        uses: bahmutov/npm-install@v1
+        with:
+          install-command: npm ci
       - run: npm run lint
       - run: npm test
         env:
           CI: true
-      - name: GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.4.0
-        if: matrix.node-version == '16.x' && github.ref == 'refs/heads/master'
-        with:
-          BRANCH: gh-pages
-          FOLDER: target/site/serenity
-          CLEAN: true
+#      - name: GitHub Pages
+#        uses: JamesIves/github-pages-deploy-action@v4.4.0
+#        if: matrix.node-version == '18.x' && github.ref == 'refs/heads/main'
+#        with:
+#          BRANCH: gh-pages
+#          FOLDER: target/site/serenity
+#          CLEAN: true

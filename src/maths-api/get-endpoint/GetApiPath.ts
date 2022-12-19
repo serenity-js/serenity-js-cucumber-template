@@ -1,4 +1,4 @@
-import { Question } from '@serenity-js/core';
+import { Answerable, Question } from '@serenity-js/core';
 
 /**
  * @desc
@@ -8,7 +8,7 @@ import { Question } from '@serenity-js/core';
  * @see https://serenity-js.org/handbook/thinking-in-serenity-js/screenplay-pattern.html
  */
 export const GetApiPath = {
-    for: (urlEncodedExpression: Question<string>): Question<Promise<string>> =>
+    for: (urlEncodedExpression: Answerable<string>): Question<Promise<string>> =>
         Question.about(`/v4?expr endpoint for ${ urlEncodedExpression }`, actor =>
             actor.answer(urlEncodedExpression).then(expression =>
                 `/v4?expr=${ expression }`

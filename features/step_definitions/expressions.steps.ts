@@ -12,7 +12,7 @@ When('{actor} requests evaluation of {}', (actor: Actor, expression: string) =>
 
 Then('{pronoun} should get {float}', (actor: Actor, expectedResult: number) =>
     actor.attemptsTo(
-        Ensure.that(LastResponse.body<Promise<number>>(), equals(expectedResult))
+        Ensure.that(LastResponse.body<number>(), equals(expectedResult))
     ));
 
 When('{actor} requests evaluation of:', (actor: Actor, expressionsTable: DataTable) =>

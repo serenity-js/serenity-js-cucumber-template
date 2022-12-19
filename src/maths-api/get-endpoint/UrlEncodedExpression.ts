@@ -1,4 +1,4 @@
-import { Question } from '@serenity-js/core';
+import { Question, QuestionAdapter } from '@serenity-js/core';
 import { escape } from 'querystring';
 
 /**
@@ -10,7 +10,7 @@ import { escape } from 'querystring';
  * @see https://serenity-js.org/handbook/thinking-in-serenity-js/screenplay-pattern.html
  */
 export const UrlEncodedExpression = {
-    from: (expression: string): Question<string> =>
+    from: (expression: string): QuestionAdapter<string> =>
         Question.about(`URL-encoded expression: ${ expression }`, actor => {
             return escape(removeWhitespace(expression));
         }),
