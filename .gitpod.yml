@@ -22,7 +22,7 @@ tasks:
     init: gp sync-await installation
     command: >
       mkdir -p target/site/serenity &&
-      npx http-server -p 8080 target/site/serenity
+      npx http-server -p 8080 target/site/serenity/index.html
 
   - name: 'Welcome'
     command: |
