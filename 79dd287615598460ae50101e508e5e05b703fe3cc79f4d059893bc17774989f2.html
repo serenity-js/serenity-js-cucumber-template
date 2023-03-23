@@ -223,7 +223,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 22-03-2023 06:42</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 23-03-2023 01:00</span>
     <br style="clear:left"/>
 </div>
 
@@ -337,8 +337,8 @@
                                                                         (4 examples)
                                                                 </td>
                                                                 <td>2</td>
-                                                                <td>06:42:09</td>
-                                                                <td>565ms</td>
+                                                                <td>01:00:35</td>
+                                                                <td>634ms</td>
                                                                 <td>
                                                                         <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                             style="display:none">SUCCESS</span>
@@ -352,8 +352,8 @@
                                                                         <a href="8393d3d46a2ef7b23feb9b49f128ae8acacf973ef0874214159481790cf50507.html">Multiple expressions</a>
                                                                 </td>
                                                                 <td>3</td>
-                                                                <td>06:42:10</td>
-                                                                <td>094ms</td>
+                                                                <td>01:00:36</td>
+                                                                <td>189ms</td>
                                                                 <td>
                                                                         <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                             style="display:none">SUCCESS</span>
@@ -503,34 +503,96 @@
 
                         ctx.fillText(text, textX, textY);
                         ctx.save();
-                    }
-                }]
-        });
+                            id="scenario-results">
+                                                                <thead>
+                                                                <tr>
+                                                                    <th>feature</th>
+                                                                    <th class="test-name-column">Scenario</th>
+                                                                    <th>Steps</th>
+                                                                    <th>Started</th>
+                                                                    <th>Duration</th>
+                                                                    <th>Result</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="61745af27f9bbad731fbe6695b2ebedbfab0681c3ad7aa233467d0fe4c4c676b.html">Expressions</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="8a1d184dcc26cfafc2e29fbfbcb6b345520f73dd3fe91ce315657bb2636662ed.html">Basic expressions</a>
+                                                                                (4 examples)
+                                                                        </td>
+                                                                        <td>2</td>
+                                                                        <td>01:00:35</td>
+                                                                        <td>634ms</td>
+                                                                        <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
+                                                                                    style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="61745af27f9bbad731fbe6695b2ebedbfab0681c3ad7aa233467d0fe4c4c676b.html">Expressions</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="8393d3d46a2ef7b23feb9b49f128ae8acacf973ef0874214159481790cf50507.html">Multiple expressions</a>
+                                                                        </td>
+                                                                        <td>3</td>
+                                                                        <td>01:00:36</td>
+                                                                        <td>189ms</td>
+                                                                        <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
+                                                                                    style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
 
-        function clickHandler(click) {
-            const points = outcomeChart.getElementsAtEventForMode(click, 'nearest', {intersect: true}, true);
-            if (points.length) {
-                const firstPoint = points[0];
-                window.open(outcomeDetailsReports[firstPoint.index].link, "_self")
+                                                    </div>
+                                                </div>
 
-            }
-        }
-        outcomeChartCtx.onclick = clickHandler;
-    </script>
-    <!-- END PIE CHART -->
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <h3><i class="bi bi-hand-index-thumb"></i> Manual Tests</h3>
 
-    <!-- SUMMARY BAR CHART -->
+                                                            No manual tests were recorded
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="beforefooter"></div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <span class="version">Serenity BDD version 3.1.0</span>
+        </div>
+    </div>
+</div>
+
+<!-- Chart data -->
+    <!-- PIE CHART -->
     <script>
 
         // Register the plugin to all charts:
         Chart.register(ChartDataLabels);
 
-        // The Severity bar chart
-        const severityChartCtx = document.getElementById('severityChart');
+        // The results pie chart
+        const outcomeChartCtx = document.getElementById('resultChart');
 
         // Options define for display value on top of bars
-
-        const severityDetailsReports = [
+        const outcomeDetailsReports = [
             { title: 'Passing Scenarios', link: "3a80629d3e7ff5efc5afcf84c3d32a647bbbb91c4a9935ffa9c5c7fae78cf1a1.html" },
             { title: 'Pending Scenarios', link: "53bbac2b655bdf9f594d7c1eb3d9d2f98dff8f4f0e493d81bda4bade04e4620d.html" },
             { title: 'Ignored Scenarios', link: "5921a094e58a9988ac1b87eb88d15a8520709c44e08543cff58b9f4b68e701ae.html" },
@@ -540,147 +602,31 @@
             { title: 'Broken Scenarios', link: "2e5b96874ad1cfa0ea10fb5c8c3358c69626f226568cae2aa308d47f563952be.html"    },
             { title: 'Compromised Scenarios',  link: "95a0b51016d44f63c648da0a6e1ab4c248714f1c12477fc70ecc7623d98690d1.html" },
         ]
-        const severityData = {
+        const outcomeData = {
             labels: ['Passing', 'Pending', 'Ignored', 'Skipped', 'Aborted', 'Failed', 'Broken', 'Compromised'],
-            datasets: [
-                {
-                    label: 'Automated',
-                    data: [5,0,0,0,0,0,0,0],
-                    backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)'],
-                    borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)'],
-                    borderWidth: 1
-                },
-                {
-                    label: 'Manual',
-                    data: [0,0,0,0,0,0,0,0],
-                    backgroundColor: ['rgba(153,204,51,0.25)','rgba(165, 199, 238, 0.25)','rgba(168, 168, 168, 0.25)','rgba(238, 224, 152, 0.375)','rgba(255, 153, 102, 0.25)','rgba(255, 22, 49, 0.25)','rgba(255, 97, 8, 0.25)','rgba(255, 104, 255, 0.25)'],
-                    borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)'],
-                    borderWidth: 1
-                },
-
-            ]
-        }
-        const severityOptions = {
-            responsive: true,
-            skipNull: true,
-            scales: {
-                x: {
-                    stacked: true,
-                },
-                y: {
-                    stacked: true,
-                }
-            },
-            plugins: {
-                // Change options for ALL labels of THIS CHART
-                datalabels: {
-                    color: '#444444',
-                    'font.weight': 'bold',
-                    formatter: (value, ctx) => {
-                        if (value === 0) {
-                            return '';
-                        } else {
-                            return value;
-                        }
-                    },
-                }
-            }
-        }
-        const severityChart = new Chart(severityChartCtx, {
-            type: 'bar',
-            data: severityData,
-            options: severityOptions
-        });
-
-        function clickHandler(click) {
-            const points = severityChart.getElementsAtEventForMode(click, 'nearest', {intersect: true}, true);
-            if (points.length) {
-                const firstPoint = points[0];
-                window.open(severityDetailsReports[firstPoint.index].link, "_self")
-
-            }
-        }
-        severityChartCtx.onclick = clickHandler;
-    </script>
-    <!-- END SUMMARY CHART -->
-
-    <!-- DURATION CHART -->
-    <script>
-
-        // Options define for display value on top of bars
-        const durationDetailsReports = [
-                {title: "Under 1 second", link: "20884bd5ee55734b3e98829564b6ad313d0485720a696e90f82d2c8a5a24bd83.html"},
-                {title: "1 to 10 seconds", link: "3bd9d1d3055381d38bec382c9e37e51dd1b5ee77eb23ebd9f1a963b5cc70318c.html"},
-                {title: "10 to 30 seconds", link: "0be6acc821fe3ab633afb4b12cd2178689bf7bd0af668442ca6523f4face057d.html"},
-                {title: "30 to 60 seconds", link: "05039dee918c27f291e0b0e0aa97691cd6b5bfe8f14560025fb1cd6a07caa4d6.html"},
-                {title: "1 to 2 minutes", link: "46b3dafb8b12de2f380a236f675656e55974acf57de9efbe71d9556eb9d2b6c9.html"},
-                {title: "2 to 5 minutes", link: "938635a7ff3402c6b4d40967abfca3fc849ec5cfe7038cfb4a09a577cce6df57.html"},
-                {title: "5 to 10 minutes", link: "b2163e4801805ea67dce9222d4d0d6a9b827ed0a9bb1efd4be0067e6a739f708.html"},
-                {title: "10 minutes or over", link: "7de5a23b377d4ca2a4ead559c759881c6e5ff8c53f06aa218f2fc859fe97658f.html"},
-        ]
-        // The Severity bar chart
-        const durationChartCtx = document.getElementById('durationChart');
-
-        // Options define for display value on top of bars
-
-        const durationData = {
-            labels: ['Under 1 second','1 to 10 seconds','10 to 30 seconds','30 to 60 seconds','1 to 2 minutes','2 to 5 minutes','5 to 10 minutes','10 minutes or over'],
             datasets: [{
-                label: 'Number of tests per duration',
+                label: 'Test Results',
                 fill: false,
-                data: ['5','0','0','0','0','0','0','0'],
-                backgroundColor: 'rgba(83, 146, 255,0.5)',
-                borderColor: 'rgba(83, 146, 255, 1)',
+                data: [5,0,0,0,0,0,0,0],
+                backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)'],
+                borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)'],
+                borderWidth: 1,
             }]
         }
-        const durationOptions = {
+        const outcomeOptions = {
             responsive: true,
             plugins: {
+                legend: {
+                    display: true,
+                    position: 'bottom'
+                },
                 // Change options for ALL labels of THIS CHART
                 datalabels: {
                     color: '#444444',
                     'font.weight': 'bold',
                     formatter: (value, ctx) => {
-                        if (value > 0) {
-                            return value;
-                        } else {
-                            return '';
-                        }
-                    },
-                },
-                tooltip: {
-                    enabled: true,
-                    usePointStyle: true,
-                    callbacks: {
-                        label: (data) => {
-                            return data.parsed.y + ' tests'
-                        }
-                    },
-                },
-            },
-        }
-
-        const durationChart = new Chart(durationChartCtx, {
-            type: 'bar',
-            data: durationData,
-            options: durationOptions
-        });
-
-        function durationClickHandler(click) {
-            const points = durationChart.getElementsAtEventForMode(click, 'nearest', {intersect: true}, true);
-            if (points.length) {
-                const firstPoint = points[0];
-                window.open(durationDetailsReports[firstPoint.index].link, "_self")
-
-            }
-        }
-
-        durationChartCtx.onclick = durationClickHandler;
-    </script>
-    <!-- END SUMMARY CHART -->
-</body>
-</html>
-.data;
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
                         dataArr.map(data => {
                             sum += data;
                         });
