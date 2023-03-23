@@ -44,7 +44,7 @@
     "tiny-types": "^1.19.1"
   },
   "devDependencies": {
-    "@types/node": "^16.18.18",
+    "@types/node": "^16.18.19",
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
     "eslint": "^8.36.0",
