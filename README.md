@@ -27,12 +27,18 @@ You can also launch it in a virtual Gitpod workspace without having to install a
 
 ### Installation
 
+To use this project, you'll need:
+- Node.js, a Long-Term Support (LTS) release version 16 or later - [download](https://nodejs.org/en/)
+- Java Runtime Environment (JRE) or a Java Development Kit (JDK) version 8 or later - [download](https://adoptopenjdk.net/)
+
+Follow the [installation instructions](https://serenity-js.org/handbook/about/installation/) to help you verify your setup.
+
 Once you have the code on your computer, use your computer terminal to run the following command in the directory where you've cloned the project:
 ```
 npm ci
 ```
 
-Running [`npm ci`](https://docs.npmjs.com/cli/v6/commands/npm-ci) downloads the [Node modules](https://docs.npmjs.com/about-packages-and-modules) this project depends on, as well as the [Serenity BDD CLI](https://github.com/serenity-bdd/serenity-cli) reporter jar. 
+Running [`npm ci`](https://docs.npmjs.com/cli/v6/commands/npm-ci) downloads the [Node modules](https://docs.npmjs.com/about-packages-and-modules) this project depends on, as well as the latest version of [`chromedriver`](https://www.npmjs.com/package/chromedriver) and the [Serenity BDD CLI](https://github.com/serenity-bdd/serenity-cli) reporter jar.
 
 ### Corporate networks
 
