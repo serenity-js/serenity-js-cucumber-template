@@ -14,7 +14,7 @@ Use this [template repository](https://help.github.com/en/articles/creating-a-re
 to get started with acceptance testing your REST/HTTP APIs using [Serenity/JS](https://serenity-js.org) and [Cucumber](https://github.com/cucumber/cucumber-js).
 
 Learn more:
-- [Serenity BDD reports for this project](https://serenity-js.github.io/serenity-js-playwright-test-template/)
+- [Serenity BDD reports for this project](https://serenity-js.github.io/serenity-js-cucumber-template/)
 - [Serenity/JS website, tutorials, and API docs](https://serenity-js.org/)
 
 ## Usage
