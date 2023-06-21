@@ -17,5 +17,5 @@ export const UrlEncodedExpression = {
 };
 
 function removeWhitespace(text: string): string {
-    return text.replace(/\s/g, '');
+    return text.replaceAll(/\s/g, '');
 }
