@@ -174,9 +174,7 @@
     <div id="contenttop">
         <div class="middlebg">
         <span class="breadcrumbs"><a href="index.html">Home</a>
-                    > <a href="8c22d3009a2b3ad795ffaf89986f7937d206c33f4e9676b9140dc8aa21853154.html" title="Mathjs Api (breadcrumbType)">
-                    Mathjs Api
-                </a>
+                    > Feature 
                 > <span class="truncate-60">
                 Expressions
             </span>
@@ -202,7 +200,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 10-07-2023 20:51:53</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 11-07-2023 18:35:48</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -290,48 +288,48 @@
                                                                             <i class="bi bi-flag-fill"></i> Tests
                                                                             Started
                                                                         </td>
-                                                                        <td>Jul 10, 2023 20:51:50</td>
+                                                                        <td>Jul 11, 2023 18:35:45</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stop-circle"></i> Tests
                                                                             Finished
                                                                         </td>
-                                                                        <td>Jul 10, 2023 20:51:51</td>
+                                                                        <td>Jul 11, 2023 18:35:45</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch"></i> Total
                                                                             Duration
                                                                         </td>
-                                                                        <td>731ms</td>
+                                                                        <td>538ms</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-trophy"></i> Fastest Test
                                                                         </td>
-                                                                        <td>91ms</td>
+                                                                        <td>80ms</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-skip-start"></i> Slowest
                                                                             Test
                                                                         </td>
-                                                                        <td>338ms</td>
+                                                                        <td>183ms</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch"></i> Average
                                                                             Execution Time
                                                                         </td>
-                                                                        <td>364ms</td>
+                                                                        <td>267ms</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch-fill"></i> Total
                                                                             Execution Time
                                                                         </td>
-                                                                        <td>729ms</td>
+                                                                        <td>535ms</td>
                                                                     </tr>
                                                                     </tbody>
                                                                 </table>
@@ -448,8 +446,8 @@
                                                                                 (4 examples)
                                                                         </td>
                                                                         <td>2</td>
-                                                                        <td>20:51:50</td>
-                                                                        <td>626ms</td>
+                                                                        <td>18:35:45</td>
+                                                                        <td>440ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                                     style="display:none">SUCCESS</span>
                                                                         </td>
@@ -462,8 +460,8 @@
                                                                             <a href="8393d3d46a2ef7b23feb9b49f128ae8acacf973ef0874214159481790cf50507.html">Multiple expressions</a>
                                                                         </td>
                                                                         <td>3</td>
-                                                                        <td>20:51:51</td>
-                                                                        <td>103ms</td>
+                                                                        <td>18:35:45</td>
+                                                                        <td>095ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                                     style="display:none">SUCCESS</span>
                                                                         </td>
@@ -552,7 +550,10 @@
                         let sum = 0;
                         let dataArr = ctx.chart.data.datasets[0].data;
                         dataArr.map(data => {
-                           === '0%') {
+                            sum += data;
+                        });
+                        let percentage = (value * 100 / sum).toFixed(0) + "%";
+                        if (percentage === '0%') {
                             return '';
                         } else {
                             return percentage;
