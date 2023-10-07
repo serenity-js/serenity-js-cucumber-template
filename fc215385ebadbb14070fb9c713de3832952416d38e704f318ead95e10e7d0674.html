@@ -174,7 +174,9 @@
     <div id="contenttop">
         <div class="middlebg">
         <span class="breadcrumbs"><a href="index.html">Home</a>
-                    > Feature 
+                    > <a href="8c22d3009a2b3ad795ffaf89986f7937d206c33f4e9676b9140dc8aa21853154.html" title="Mathjs Api (breadcrumbType)">
+                    Mathjs Api
+                </a>
                 > <span class="truncate-60">
                 Expressions
             </span>
@@ -200,14 +202,8 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 04-10-2023 06:20:40</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 07-10-2023 01:02:22</span>
     <br style="clear:left"/>
-</div>
-    <div class="clr"></div>
-    <div id="beforetable"></div>
-    <div id="results-dashboard">
-        <div class="middlb">
-            <div class="ft"/>
 </div>
     <div class="clr"></div>
     <div id="beforetable"></div>
@@ -294,48 +290,46 @@
                                                                             <i class="bi bi-flag-fill"></i> Tests
                                                                             Started
                                                                         </td>
-                                                                        <td>Oct 04, 2023 06:20:35</td>
+                                                                        <td>Oct 07, 2023 01:02:19</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stop-circle"></i> Tests
                                                                             Finished
                                                                         </td>
-                                                                        <td>Oct 04, 2023 06:20:36</td>
+                                                                        <td>Oct 07, 2023 01:02:19</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch"></i> Total
                                                                             Duration
                                                                         </td>
-                                                                        <td>963ms</td>
+                                                                        <td>657ms</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-trophy"></i> Fastest Test
                                                                         </td>
-                                                                        <td>152ms</td>
+                                                                        <td>85ms</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-skip-start"></i> Slowest
                                                                             Test
                                                                         </td>
-                                                                        <td>286ms</td>
-                                                                    </tr>
-                                                                    <tr scope="row">
+                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch"></i> Average
                                                                             Execution Time
                                                                         </td>
-                                                                        <td>480ms</td>
+                                                                        <td>327ms</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch-fill"></i> Total
                                                                             Execution Time
                                                                         </td>
-                                                                        <td>960ms</td>
+                                                                        <td>655ms</td>
                                                                     </tr>
                                                                     </tbody>
                                                                 </table>
@@ -428,7 +422,13 @@
                                             <div class="container-fluid">
                                                 <div class="row">
                                                     <div class="col-sm-12">
-                                                        <h3><i class="bi bi-gear"></i> Automated Tests</h3             id="scenario-results">
+                                                        <h3><i class="bi bi-gear"></i> Automated Tests</h3>
+
+                                                            <table class="scenario-result-table table"
+                                                       
+
+                                                            <table class="scenario-result-table table"
+                                                                   id="scenario-results">
                                                                 <thead>
                                                                 <tr>
                                                                     <th>feature</th>
@@ -449,8 +449,8 @@
                                                                                 (4 examples)
                                                                         </td>
                                                                         <td>2</td>
-                                                                        <td>06:20:35</td>
-                                                                        <td>780ms</td>
+                                                                        <td>01:02:19</td>
+                                                                        <td>555ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                                     style="display:none">SUCCESS</span>
                                                                         </td>
@@ -463,8 +463,8 @@
                                                                             <a href="8393d3d46a2ef7b23feb9b49f128ae8acacf973ef0874214159481790cf50507.html">Multiple expressions</a>
                                                                         </td>
                                                                         <td>3</td>
-                                                                        <td>06:20:36</td>
-                                                                        <td>180ms</td>
+                                                                        <td>01:02:19</td>
+                                                                        <td>100ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                                     style="display:none">SUCCESS</span>
                                                                         </td>
@@ -553,13 +553,7 @@
                         let sum = 0;
                         let dataArr = ctx.chart.data.datasets[0].data;
                         dataArr.map(data => {
-                            sum += data;
-                        });
-                        let percentage = (value * 100 / sum).toFixed(0) + "%";
-                        if (percentage  sum += data;
-                        });
-                        let percentage = (value * 100 / sum).toFixed(0) + "%";
-                        if (percentage === '0%') {
+                           === '0%') {
                             return '';
                         } else {
                             return percentage;
@@ -874,6 +868,16 @@
                 if (coverageReports[firstPoint.index].link) {
                     window.open(coverageReports[firstPoint.index].link, "_self")
                 }
+            }
+        }
+
+        coverageChartCtx.onclick = coverageClickHandler;
+    </script>
+    <!-- END COVERAGE CHART -->
+
+</body>
+</html>
+             }
             }
         }
 
