@@ -174,9 +174,7 @@
     <div id="contenttop">
         <div class="middlebg">
         <span class="breadcrumbs"><a href="index.html">Home</a>
-                    > <a href="8c22d3009a2b3ad795ffaf89986f7937d206c33f4e9676b9140dc8aa21853154.html" title="Mathjs Api (breadcrumbType)">
-                    Mathjs Api
-                </a>
+                    > Feature 
                 > <span class="truncate-60">
                 Expressions
             </span>
@@ -202,8 +200,14 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 07-10-2023 04:01:06</span>
-    <br style="clear:letable">
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 07-10-2023 14:10:43</span>
+    <br style="clear:left"/>
+</div>
+    <div class="clr"></div>
+    <div id="beforetable"></div>
+    <div id="results-dashboard">
+        <div class="middlb">
+            <div class="table">
 
                 <h2><i class='bi bi-tags'></i> Feature: Expressions</h2>
                 <table class='overview'>
@@ -284,48 +288,48 @@
                                                                             <i class="bi bi-flag-fill"></i> Tests
                                                                             Started
                                                                         </td>
-                                                                        <td>Oct 07, 2023 04:01:02</td>
+                                                                        <td>Oct 07, 2023 14:10:39</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stop-circle"></i> Tests
                                                                             Finished
                                                                         </td>
-                                                                        <td>Oct 07, 2023 04:01:03</td>
+                                                                        <td>Oct 07, 2023 14:10:40</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch"></i> Total
                                                                             Duration
                                                                         </td>
-                                                                        <td>702ms</td>
+                                                                        <td>1s</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-trophy"></i> Fastest Test
                                                                         </td>
-                                                                        <td>86ms</td>
+                                                                        <td>190ms</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-skip-start"></i> Slowest
                                                                             Test
                                                                         </td>
-                                                                        <td>326ms</td>
+                                                                        <td>465ms</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch"></i> Average
                                                                             Execution Time
                                                                         </td>
-                                                                        <td>350ms</td>
+                                                                        <td>643ms</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch-fill"></i> Total
                                                                             Execution Time
                                                                         </td>
-                                                                        <td>700ms</td>
+                                                                        <td>1s</td>
                                                                     </tr>
                                                                     </tbody>
                                                                 </table>
@@ -421,9 +425,6 @@
                                                         <h3><i class="bi bi-gear"></i> Automated Tests</h3>
 
                                                             <table class="scenario-result-table table"
-                                                       
-
-                                                            <table class="scenario-result-table table"
                                                                    id="scenario-results">
                                                                 <thead>
                                                                 <tr>
@@ -445,8 +446,8 @@
                                                                                 (4 examples)
                                                                         </td>
                                                                         <td>2</td>
-                                                                        <td>04:01:02</td>
-                                                                        <td>599ms</td>
+                                                                        <td>14:10:39</td>
+                                                                        <td>1s 072ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                                     style="display:none">SUCCESS</span>
                                                                         </td>
@@ -459,8 +460,8 @@
                                                                             <a href="8393d3d46a2ef7b23feb9b49f128ae8acacf973ef0874214159481790cf50507.html">Multiple expressions</a>
                                                                         </td>
                                                                         <td>3</td>
-                                                                        <td>04:01:03</td>
-                                                                        <td>101ms</td>
+                                                                        <td>14:10:40</td>
+                                                                        <td>214ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                                     style="display:none">SUCCESS</span>
                                                                         </td>
@@ -549,7 +550,10 @@
                         let sum = 0;
                         let dataArr = ctx.chart.data.datasets[0].data;
                         dataArr.map(data => {
-                           === '0%') {
+                            sum += data;
+                        });
+                        let percentage = (value * 100 / sum).toFixed(0) + "%";
+                        if (percentage === '0%') {
                             return '';
                         } else {
                             return percentage;
@@ -707,7 +711,7 @@
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['5','0','0','0','0','0','0','0'],
+                data: ['1','4','0','0','0','0','0','0'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]
