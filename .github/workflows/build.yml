@@ -32,7 +32,7 @@ jobs:
           CI: true
       - name: GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.4.3
-        if: matrix.node-version == '18.x' && github.ref == 'refs/heads/main'
+        if: matrix.os == 'ubuntu-latest' && matrix.node-version == '18.x' && github.ref == 'refs/heads/main'
         with:
           BRANCH: gh-pages
           FOLDER: target/site/serenity
