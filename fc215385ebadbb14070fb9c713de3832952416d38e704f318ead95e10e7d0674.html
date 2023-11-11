@@ -200,14 +200,8 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 11-11-2023 22:16:30</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 11-11-2023 22:23:05</span>
     <br style="clear:left"/>
-</div>
-    <div class="clr"></div>
-    <div id="beforetable"></div>
-    <div id="results-dashboard">
-        <div class="middlb">
-            <div class="ft"/>
 </div>
     <div class="clr"></div>
     <div id="beforetable"></div>
@@ -294,14 +288,14 @@
                                                                             <i class="bi bi-flag-fill"></i> Tests
                                                                             Started
                                                                         </td>
-                                                                        <td>Nov 11, 2023 22:16:23</td>
+                                                                        <td>Nov 11, 2023 22:23:02</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stop-circle"></i> Tests
                                                                             Finished
                                                                         </td>
-                                                                        <td>Nov 11, 2023 22:16:24</td>
+                                                                        <td>Nov 11, 2023 22:23:03</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
@@ -314,21 +308,21 @@
                                                                         <td>
                                                                             <i class="bi bi-trophy"></i> Fastest Test
                                                                         </td>
-                                                                        <td>226ms</td>
+                                                                        <td>208ms</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-skip-start"></i> Slowest
                                                                             Test
                                                                         </td>
-                                                                        <td>333ms</td>
+                                                                        <td>344ms</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch"></i> Average
                                                                             Execution Time
                                                                         </td>
-                                                                        <td>678ms</td>
+                                                                        <td>610ms</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
@@ -430,7 +424,9 @@
                                                     <div class="col-sm-12">
                                                         <h3><i class="bi bi-gear"></i> Automated Tests</h3>
 
-          id="scenario-results">
+                                                            <table class="scenario-result-table table"
+                                                                                                                     <table class="scenario-result-table table"
+                                                                   id="scenario-results">
                                                                 <thead>
                                                                 <tr>
                                                                     <th>feature</th>
@@ -451,8 +447,8 @@
                                                                                 (4 examples)
                                                                         </td>
                                                                         <td>2</td>
-                                                                        <td>22:16:23</td>
-                                                                        <td>1s 023ms</td>
+                                                                        <td>22:23:02</td>
+                                                                        <td>987ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                                     style="display:none">SUCCESS</span>
                                                                         </td>
@@ -465,8 +461,8 @@
                                                                             <a href="8393d3d46a2ef7b23feb9b49f128ae8acacf973ef0874214159481790cf50507.html">Multiple expressions</a>
                                                                         </td>
                                                                         <td>3</td>
-                                                                        <td>22:16:24</td>
-                                                                        <td>333ms</td>
+                                                                        <td>22:23:03</td>
+                                                                        <td>234ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                                     style="display:none">SUCCESS</span>
                                                                         </td>
@@ -556,9 +552,6 @@
                         let dataArr = ctx.chart.data.datasets[0].data;
                         dataArr.map(data => {
                             sum += data;
-                        });
-                        let percentage = (value * 100 / sum).toFixed(0) + "%";
-                        if (percentage ==um += data;
                         });
                         let percentage = (value * 100 / sum).toFixed(0) + "%";
                         if (percentage === '0%') {
@@ -719,7 +712,7 @@
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['1','4','0','0','0','0','0','0'],
+                data: ['5','0','0','0','0','0','0','0'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]
