@@ -115,7 +115,11 @@
                     search: ""
                 },
                 columnDefs: [
-                    {type: 'time-elapsed-dhms', targets: 5}
+                    {
+                        targets: 4,
+                        visible: false
+                    },
+                    {type: 'time-elapsed-dhms', targets: 6}
                 ]
             })
             $("#manual-scenario-results").DataTable({
@@ -124,6 +128,12 @@
                     searchPlaceholder: "Filter",
                     search: ""
                 },
+                columnDefs: [
+                    {
+                        targets: 4,
+                        visible: false
+                    },
+                ]
             })
 
             // Results table
@@ -142,7 +152,17 @@
             $(".feature-coverage-table").DataTable({
                 searching: true,
                 paging: false,
-                info: false
+                info: false,
+                language: {
+                    searchPlaceholder: "Filter",
+                    search: ""
+                },
+                columnDefs: [
+                    {
+                        targets: 2,
+                        visible: false
+                    },
+                ]
             });
 
             $(".feature-coverage-table-with-pagination").DataTable({
@@ -152,7 +172,13 @@
                 language: {
                     searchPlaceholder: "Filter",
                     search: ""
-                }
+                },
+                columnDefs: [
+                    {
+                        targets: 2,
+                        visible: false
+                    },
+                ]
             });
         });
     </script>
@@ -198,7 +224,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 26-08-2024 17:38:15</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 27-08-2024 15:02:05</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -295,48 +321,48 @@
                     <td>
                         <i class="bi bi-flag-fill"></i> Tests Started
                     </td>
-                    <td>Aug 26, 2024 17:38:08</td>
+                    <td>Aug 27, 2024 15:02:01</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stop-circle"></i> Tests
                         Finished
                     </td>
-                    <td>Aug 26, 2024 17:38:09</td>
+                    <td>Aug 27, 2024 15:02:01</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stopwatch"></i> Total
                         Duration
                     </td>
-                    <td>633ms</td>
+                    <td>630ms</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-trophy"></i> Fastest Test
                     </td>
-                    <td>95ms</td>
+                    <td>91ms</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-skip-start"></i> Slowest
                         Test
                     </td>
-                    <td>335ms</td>
+                    <td>331ms</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stopwatch"></i> Average
                         Execution Time
                     </td>
-                    <td>143ms</td>
+                    <td>145ms</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stopwatch-fill"></i> Total
                         Execution Time
                     </td>
-                    <td>729ms</td>
+                    <td>737ms</td>
                 </tr>
                 </tbody>
             </table>
@@ -353,12 +379,12 @@
 
                                                                     <h4>Features</h4>
 
-                                                                    <table class="table feature-coverage-table"
-                                                                           id="Feature">
+                                                                    <table class="table feature-coverage-table" id="Feature" style="width:100%">
                                                                         <thead>
                                                                         <tr>
                                                                             <th>Feature</th>
                                                                             <th style="width:1em;">Scenarios</th>
+                                                                            <th style="width:1em;">StepsText</th>
                                                                             <th style="width:1em;">Test&nbsp;Cases</th>
                                                                             <th style="width:1em;">%&nbsp;Pass</th>
                                                                             <th style="width:1em;">Result</th>
@@ -371,6 +397,56 @@
                                                                                             <a href="61745af27f9bbad731fbe6695b2ebedbfab0681c3ad7aa233467d0fe4c4c676b.html"> Expressions</a>
                                                                                     </td>
                                                                                     <td>2</td>
+                                                                                    <td>Basic expressions #1 - expression: 2 + 3, expected_result: 5
+Before
+When Sandra requests evaluation of 2 + 3
+Sandra requests evaluation of "2 + 3"
+Sandra sends a GET request to /v4?expr endpoint for URL-encoded expression: 2 + 3
+Sandra ensures that the status of the last response does equal 200
+Then she should get 5
+Sandra ensures that the body of the last response does equal 5
+Basic expressions #2 - expression: 2 - 3, expected_result: -1
+Before
+When Sandra requests evaluation of 2 - 3
+Sandra requests evaluation of "2 - 3"
+Sandra sends a GET request to /v4?expr endpoint for URL-encoded expression: 2 - 3
+Sandra ensures that the status of the last response does equal 200
+Then she should get -1
+Sandra ensures that the body of the last response does equal -1
+Basic expressions #3 - expression: 2 * 2 + 2, expected_result: 6
+Before
+When Sandra requests evaluation of 2 * 2 + 2
+Sandra requests evaluation of "2 * 2 + 2"
+Sandra sends a GET request to /v4?expr endpoint for URL-encoded expression: 2 * 2 + 2
+Sandra ensures that the status of the last response does equal 200
+Then she should get 6
+Sandra ensures that the body of the last response does equal 6
+Basic expressions #4 - expression: 2 + 2 * 2, expected_result: 6
+Before
+When Sandra requests evaluation of 2 + 2 * 2
+Sandra requests evaluation of "2 + 2 * 2"
+Sandra sends a GET request to /v4?expr endpoint for URL-encoded expression: 2 + 2 * 2
+Sandra ensures that the status of the last response does equal 200
+Then she should get 6
+Sandra ensures that the body of the last response does equal 6
+Before
+When Sandra requests evaluation of:
+| expression |
+| 2 + 3      |
+| 2 - 3      |
+| 2 * 2 + 2  |
+| 2 + 2 * 2  |
+Sandra requests evaluation of multiple expressions
+Sandra sends a POST request to '/v4'
+Sandra ensures that the status of the last response does equal 200
+Then she should get following results:
+| expected_result |
+| 5               |
+| -1              |
+| 6               |
+| 6               |
+Sandra ensures that the body of the last response does have property result that does equal [ "5", "-1", "6", "6" ]
+</td>
                                                                                     <td>5</td>
                                                                                     <td>100%</td>
                                                                                     <td>
@@ -445,7 +521,7 @@
                         <i class="bi bi-stopwatch"></i> Total
                         Duration
                     </td>
-                    <td>633ms</td>
+                    <td>630ms</td>
                 </tr>
                 <tr scope="row">
                     <td>
@@ -455,7 +531,7 @@
                     <td>
                         <i class="bi bi-trophy"></i> Fastest Test
                     </td>
-                    <td>95ms</td>
+                    <td>91ms</td>
                 </tr>
                 <tr scope="row">
                     <td>
@@ -466,30 +542,30 @@
                         <i class="bi bi-skip-start"></i> Slowest
                         Test
                     </td>
-                    <td>335ms</td>
+                    <td>331ms</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-flag-fill"></i> Tests Started
                     </td>
-                    <td>Aug 26, 2024 17:38:08</td>
+                    <td>Aug 27, 2024 15:02:01</td>
                     <td>
                         <i class="bi bi-stopwatch"></i> Average
                         Execution Time
                     </td>
-                    <td>143ms</td>
+                    <td>145ms</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stop-circle"></i> Tests
                         Finished
                     </td>
-                    <td>Aug 26, 2024 17:38:09</td>
+                    <td>Aug 27, 2024 15:02:01</td>
                     <td>
                         <i class="bi bi-stopwatch-fill"></i> Total
                         Execution Time
                     </td>
-                    <td>729ms</td>
+                    <td>737ms</td>
                 </tr>
                 </tbody>
             </table>
@@ -498,14 +574,14 @@
 
                                                         <h3><i class="bi bi-gear"></i> Automated Scenarios</h3>
 
-                                                            <table class="scenario-result-table table"
-                                                                   id="scenario-results">
+                                                            <table class="scenario-result-table table" id="scenario-results" style="width:100%">
                                                                 <thead>
                                                                 <tr>
                                                                     <th>feature</th>
                                                                     <th class="test-name-column">Scenario</th>
                                                                     <th>Context</th>
                                                                     <th>Steps</th>
+                                                                    <th>StepsText</th>
                                                                     <th>Started</th>
                                                                     <th>Total Duration</th>
                                                                     <th>Result</th>
@@ -527,8 +603,11 @@
                                                                         <td><span style="display:none"></span>
                                                                         </td>
                                                                         <td>2</td>
-                                                                        <td data-order="1724693888">17:38:08</td>
-                                                                        <td>633ms</td>
+                                                                        <td>When Sandra requests evaluation of <expression>
+Then she should get <expected_result>
+</td>
+                                                                        <td data-order="1724770921">15:02:01</td>
+                                                                        <td>630ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                                     style="display:none">SUCCESS</span>
                                                                         </td>
@@ -543,8 +622,30 @@
                                                                         <td><span style="display:none"></span>
                                                                         </td>
                                                                         <td>3</td>
-                                                                        <td data-order="1724693889">17:38:09</td>
-                                                                        <td>096ms</td>
+                                                                        <td>Before
+When Sandra requests evaluation of:
+
+
+| expression |
+|---|
+| 2 + 3      |
+| 2 - 3      |
+| 2 * 2 + 2  |
+| 2 + 2 * 2  |
+
+Then she should get following results:
+
+
+| expected_result |
+|---|
+| 5               |
+| -1              |
+| 6               |
+| 6               |
+
+</td>
+                                                                        <td data-order="1724770921">15:02:01</td>
+                                                                        <td>107ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                                     style="display:none">SUCCESS</span>
                                                                         </td>
@@ -612,7 +713,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
-            <span class="version">Serenity BDD version 4.1.6</span>
+            <span class="version">Serenity BDD version 4.1.20</span>
         </div>
     </div>
 </div>
