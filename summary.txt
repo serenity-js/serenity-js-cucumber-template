@@ -1,4 +1,4 @@
-Serenity report generated 19-05-2025 06:10:12
+Serenity report generated 21-05-2025 02:46:28
 
 Test Cases:         2  (including 4 rows of test data)
 Passed:             2
