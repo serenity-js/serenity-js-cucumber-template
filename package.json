@@ -33,12 +33,12 @@
   },
   "dependencies": {
     "@cucumber/cucumber": "^11.3.0",
-    "@serenity-js/assertions": "^3.35.3",
-    "@serenity-js/console-reporter": "^3.35.3",
-    "@serenity-js/core": "^3.35.3",
-    "@serenity-js/cucumber": "^3.35.3",
-    "@serenity-js/rest": "^3.35.3",
-    "@serenity-js/serenity-bdd": "^3.35.3",
+    "@serenity-js/assertions": "^3.36.0",
+    "@serenity-js/console-reporter": "^3.36.0",
+    "@serenity-js/core": "^3.36.0",
+    "@serenity-js/cucumber": "^3.36.0",
+    "@serenity-js/rest": "^3.36.0",
+    "@serenity-js/serenity-bdd": "^3.36.0",
     "tiny-types": "^1.24.1"
   },
   "devDependencies": {
