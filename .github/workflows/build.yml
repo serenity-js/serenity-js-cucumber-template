@@ -8,34 +8,31 @@ on:
     types: [ opened, synchronize ]
 
 jobs:
-  build:
+  test:
+    timeout-minutes: 60
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [ 18.x, 20.x, 22.x ]
-
+    container:
+      image: ghcr.io/serenity-js/playwright:v1.56.1-noble
     steps:
-      - uses: actions/checkout@v6
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v6
+      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6
+      - uses: actions/setup-node@v6
         with:
-          node-version: ${{ matrix.node-version }}
-      - uses: actions/setup-java@v5
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-      - name: Install Node Modules
+          node-version: '24.11.1'
+      - name: Setup Node Modules
         uses: bahmutov/npm-install@v1
+      - name: Lint
+        run: npm run lint
+      - name: Test
+        run: npm test
+      - uses: actions/upload-artifact@v5
+        if: always()
         with:
-          install-command: npm ci
-      - run: npm run lint
-      - run: npm test
-        env:
-          CI: true
-
+          name: serenity-report
+          path: target/site/serenity
+          retention-days: 30
       - name: GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.7.4
-        if: matrix.node-version == '22.x' && github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main'
         with:
           branch: gh-pages
           folder: target/site/serenity
