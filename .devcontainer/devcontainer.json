@@ -34,7 +34,6 @@
         "dbaeumer.vscode-eslint",
         "editorconfig.editorconfig",
         "eamodio.gitlens",
-        "ms-playwright.playwright",
         "stateful.runme"
       ],
       "settings": {
