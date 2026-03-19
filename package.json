@@ -39,7 +39,7 @@
     "@serenity-js/cucumber": "^3.42.0",
     "@serenity-js/rest": "^3.42.0",
     "@serenity-js/serenity-bdd": "^3.42.0",
-    "tiny-types": "^1.24.3"
+    "tiny-types": "^2.0.5"
   },
   "devDependencies": {
     "@types/node": "^24.12.0",
