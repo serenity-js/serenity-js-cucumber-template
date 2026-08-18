@@ -2,20 +2,15 @@
   "image": "ghcr.io/serenity-js/playwright:v1.62.1-resolute",
 
   "features": {
-    "ghcr.io/devcontainers/features/desktop-lite:1": {},
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
 
   "forwardPorts": [
-    6080,
     8080
   ],
   "portsAttributes": {
-    "6080": {
-      "label": "Desktop"
-    },
     "8080": {
-      "label": "Serenity Reports"
+      "label": "Serenity/JS HTML Report"
     }
   },
   "postCreateCommand": {
@@ -24,8 +19,7 @@
   },
   "waitFor": "postCreateCommand",
   "postAttachCommand": {
-    "Serenity/JS Test Run": "npm test",
-    "Serenity Reports Preview": "npx http-server -p 8080 target/site/serenity/"
+    "Serenity/JS Test Run & Report": "npm test; npx @serenity-js/html-reporter serve --dir ./reports/serenity-js --port 8080"
   },
 
   "customizations": {
