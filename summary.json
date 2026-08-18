@@ -1,0 +1,51 @@
+{
+  "$schema": "https://serenity-js.org/schemas/report-summary.json",
+  "generated": "2026-08-18T15:35:59.838Z",
+  "title": "Cucumber",
+  "schemaVersion": 1,
+  "reportUrl": "./index.html",
+  "ci": {
+    "commit": "786b4a795f7686592bcad93ebcc0be89a6272a2d",
+    "branch": "main",
+    "jobUrl": "https://github.com/serenity-js/serenity-js-cucumber-template/actions/runs/32155269801"
+  },
+  "latestRun": {
+    "timestamp": "2026-08-18T15:35:59.430Z",
+    "label": "3590",
+    "totals": {
+      "passed": 2,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "compromised": 0,
+      "error": 0
+    },
+    "duration": 1067
+  },
+  "runs": 1,
+  "failureClusters": [],
+  "consistency": {
+    "flaky": [],
+    "inconsistent": [],
+    "degraded": [],
+    "recovered": []
+  },
+  "scores": {
+    "passRate": 100,
+    "completeness": 100,
+    "consistency": 100,
+    "confidence": 100
+  },
+  "slowest": [
+    {
+      "name": "Basic expressions",
+      "source": "mathjs-api/expressions.feature:26",
+      "duration": 1067
+    },
+    {
+      "name": "Multiple expressions",
+      "source": "mathjs-api/expressions.feature:30",
+      "duration": 186
+    }
+  ]
+}
