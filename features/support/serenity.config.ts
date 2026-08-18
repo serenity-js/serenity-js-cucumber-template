@@ -11,13 +11,15 @@ import { Actors } from '../../src';
  * @see https://serenity-js.org/handbook/reporting/index.html
  */
 BeforeAll(function () {
-    // Configure Serenity/JS
+    // Configure Serenity/JS reporting services
     configure({
         // Configure Serenity/JS reporting services
         crew: [
             [ '@serenity-js/console-reporter', { theme: 'auto' } ],
-            [ '@serenity-js/core:ArtifactArchiver', { outputDirectory: path.resolve(__dirname, '../../target/site/serenity') } ],
-            [ '@serenity-js/serenity-bdd', { specDirectory: path.resolve(__dirname, '../../features') } ],
+            [ '@serenity-js/html-reporter', {
+                outputDirectory: path.resolve(__dirname, '../../reports/serenity-js'),
+                specDirectory: path.resolve(__dirname, '../../features'),
+            } ],
         ],
     });
 });
