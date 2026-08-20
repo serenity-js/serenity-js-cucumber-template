@@ -1,26 +1,22 @@
-window.__SERENITY_REPORT_DATA__ = {
+{
   "schemaVersion": 1,
-  "summary": {
-    "title": "Cucumber",
-    "totalScenarios": 2,
-    "outcomes": {
-      "passed": 2,
-      "failed": 0,
-      "pending": 0,
-      "skipped": 0,
-      "compromised": 0,
-      "error": 0
-    },
-    "duration": 1243,
-    "startedAt": "2026-08-20T12:43:19.327Z",
-    "finishedAt": "2026-08-20T12:43:20.570Z",
-    "testRunner": "Cucumber"
+  "startedAt": "2026-08-20T12:43:19.327Z",
+  "finishedAt": "2026-08-20T12:43:20.570Z",
+  "outcomes": {
+    "passed": 2,
+    "failed": 0,
+    "pending": 0,
+    "skipped": 0,
+    "compromised": 0,
+    "error": 0
   },
-  "scenarios": [
+  "scenes": [
     {
       "name": "Basic expressions",
       "category": "Expressions",
-      "outcome": "SUCCESS",
+      "outcome": {
+        "code": 64
+      },
       "duration": 1243,
       "startedAt": "2026-08-20T12:43:19.327Z",
       "source": {
@@ -42,24 +38,15 @@ window.__SERENITY_REPORT_DATA__ = {
         }
       ],
       "activities": [],
-      "executionHistory": [
+      "narrative": "[math.js](https://mathjs.org/) is available as a RESTful API at [api.mathjs.org](https://api.mathjs.org/).\n\nEvaluations can be done via GET or POST requests.\nThe duration per evaluation of this free service is limited to 10 seconds,\nwith a maximum of 10,000 requests per day.",
+      "description": "Single expression requests can be evaluated using the [GET endpoint](https://api.mathjs.org/#get).",
+      "artifacts": [
         {
-          "outcome": "SUCCESS",
-          "run": "3590",
-          "timestamp": "2026-08-18T15:35:59.430Z",
-          "duration": 1067,
-          "activities": []
-        },
-        {
-          "outcome": "SUCCESS",
-          "run": "3592",
-          "timestamp": "2026-08-20T12:43:19.327Z",
-          "duration": 1243,
-          "activities": []
+          "path": "test-runs/3592/serenity-js-cucumber-template-1/artifact-get-http---api-mathjs-org-v4-expr-2-2b2-2-ad36b1c4c7.json",
+          "type": "screenshot",
+          "activityId": "ra95qqgtyk9obgylmttiqp5f"
         }
       ],
-      "narrative": "<p><a href=\"https://mathjs.org/\">math.js</a> is available as a RESTful API at <a href=\"https://api.mathjs.org/\">api.mathjs.org</a>.</p>\n<p>Evaluations can be done via GET or POST requests.\nThe duration per evaluation of this free service is limited to 10 seconds,\nwith a maximum of 10,000 requests per day.</p>\n",
-      "description": "<p>Single expression requests can be evaluated using the <a href=\"https://api.mathjs.org/#get\">GET endpoint</a>.</p>\n",
       "cast": [
         {
           "name": "Sandra",
@@ -93,49 +80,57 @@ window.__SERENITY_REPORT_DATA__ = {
               "expression": "2 + 3",
               "expected_result": "5"
             },
-            "outcome": "SUCCESS",
+            "outcome": {
+              "code": 64
+            },
             "duration": 526,
             "activities": [
               {
-                "name": "Before",
-                "outcome": "SUCCESS",
-                "duration": 1,
-                "children": [],
                 "type": "Task",
+                "name": "Before",
+                "outcome": {
+                  "code": 64
+                },
+                "duration": 1,
                 "startedAt": "2026-08-20T12:43:18.316Z",
+                "children": [],
                 "location": {
                   "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/support/serenity.config.ts",
                   "line": 32
                 }
               },
               {
+                "type": "Task",
                 "name": "When Sandra requests evaluation of 2 + 3",
-                "outcome": "SUCCESS",
+                "outcome": {
+                  "code": 64
+                },
                 "duration": 493,
+                "startedAt": "2026-08-20T12:43:18.317Z",
                 "children": [
                   {
+                    "type": "Task",
                     "name": "Sandra requests evaluation of \"2 + 3\"",
-                    "outcome": "SUCCESS",
+                    "outcome": {
+                      "code": 64
+                    },
                     "duration": 464,
+                    "startedAt": "2026-08-20T12:43:18.335Z",
                     "children": [
                       {
-                        "name": "Sandra sends a GET request to /v4?expr endpoint for URL-encoded expression: 2 + 3",
-                        "outcome": "SUCCESS",
-                        "duration": 441,
-                        "children": [],
                         "type": "Interaction",
+                        "name": "Sandra sends a GET request to /v4?expr endpoint for URL-encoded expression: 2 + 3",
+                        "outcome": {
+                          "code": 64
+                        },
+                        "duration": 441,
                         "startedAt": "2026-08-20T12:43:18.335Z",
+                        "children": [],
                         "location": {
                           "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
                           "line": 10,
                           "column": 27
                         },
-                        "artifacts": [
-                          {
-                            "path": "test-runs/3592/serenity-js-cucumber-template-1/artifact-get-http---api-mathjs-org-v4-expr-2-2b3-d51bc5bd48.json",
-                            "type": "screenshot"
-                          }
-                        ],
                         "restQuery": {
                           "method": "GET",
                           "url": "http://api.mathjs.org/v4?expr=2%2B3",
@@ -143,15 +138,23 @@ window.__SERENITY_REPORT_DATA__ = {
                           "statusCode": 200,
                           "responseHeaders": "access-control-allow-headers: Content-Type, X-Requested-With\naccess-control-allow-methods: GET, POST, OPTIONS\naccess-control-allow-origin: *\ncontent-length: 1\ncontent-type: text/html; charset=utf-8\ndate: Thu, 20 Aug 2026 12:43:18 GMT\netag: W/\"1-rDR41po8gfpi5g9cNpYWWk5easQ\"\nnel: {\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}\nreport-to: {\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=TjEC8DcXP5nRB0Lvm3fw075Cf8Cf%2Fhlkt6PvgeSQgcc%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1787229798\"}],\"max_age\":3600}\nreporting-endpoints: heroku-nel=\"https://nel.heroku.com/reports?s=TjEC8DcXP5nRB0Lvm3fw075Cf8Cf%2Fhlkt6PvgeSQgcc%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1787229798\"\nserver: Heroku\nvary: Accept-Encoding\nvia: 1.1 heroku-router\nx-powered-by: Express\nx-ratelimit-limit: 1000000\nx-ratelimit-remaining: 996429\nx-ratelimit-reset: 1787269008\nconnection: close",
                           "responseBody": "5"
-                        }
+                        },
+                        "artifacts": [
+                          {
+                            "path": "test-runs/3592/serenity-js-cucumber-template-1/artifact-get-http---api-mathjs-org-v4-expr-2-2b3-d51bc5bd48.json",
+                            "type": "screenshot"
+                          }
+                        ]
                       },
                       {
-                        "name": "Sandra ensures that the status of the last response does equal 200",
-                        "outcome": "SUCCESS",
-                        "duration": 2,
-                        "children": [],
                         "type": "Interaction",
+                        "name": "Sandra ensures that the status of the last response does equal 200",
+                        "outcome": {
+                          "code": 64
+                        },
+                        "duration": 2,
                         "startedAt": "2026-08-20T12:43:18.787Z",
+                        "children": [],
                         "location": {
                           "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
                           "line": 10,
@@ -159,8 +162,6 @@ window.__SERENITY_REPORT_DATA__ = {
                         }
                       }
                     ],
-                    "type": "Task",
-                    "startedAt": "2026-08-20T12:43:18.335Z",
                     "location": {
                       "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
                       "line": 10,
@@ -168,25 +169,29 @@ window.__SERENITY_REPORT_DATA__ = {
                     }
                   }
                 ],
-                "type": "Task",
-                "startedAt": "2026-08-20T12:43:18.317Z",
                 "location": {
                   "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/mathjs-api/expressions.feature",
                   "line": 15
                 }
               },
               {
+                "type": "Task",
                 "name": "Then she should get 5",
-                "outcome": "SUCCESS",
+                "outcome": {
+                  "code": 64
+                },
                 "duration": 14,
+                "startedAt": "2026-08-20T12:43:18.811Z",
                 "children": [
                   {
-                    "name": "Sandra ensures that the body of the last response does equal 5",
-                    "outcome": "SUCCESS",
-                    "duration": 1,
-                    "children": [],
                     "type": "Interaction",
+                    "name": "Sandra ensures that the body of the last response does equal 5",
+                    "outcome": {
+                      "code": 64
+                    },
+                    "duration": 1,
                     "startedAt": "2026-08-20T12:43:18.814Z",
+                    "children": [],
                     "location": {
                       "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
                       "line": 15,
@@ -194,8 +199,6 @@ window.__SERENITY_REPORT_DATA__ = {
                     }
                   }
                 ],
-                "type": "Task",
-                "startedAt": "2026-08-20T12:43:18.811Z",
                 "location": {
                   "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/mathjs-api/expressions.feature",
                   "line": 16
@@ -209,49 +212,57 @@ window.__SERENITY_REPORT_DATA__ = {
               "expression": "2 - 3",
               "expected_result": "-1"
             },
-            "outcome": "SUCCESS",
+            "outcome": {
+              "code": 64
+            },
             "duration": 240,
             "activities": [
               {
-                "name": "Before",
-                "outcome": "SUCCESS",
-                "duration": 0,
-                "children": [],
                 "type": "Task",
+                "name": "Before",
+                "outcome": {
+                  "code": 64
+                },
+                "duration": 0,
                 "startedAt": "2026-08-20T12:43:18.844Z",
+                "children": [],
                 "location": {
                   "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/support/serenity.config.ts",
                   "line": 32
                 }
               },
               {
+                "type": "Task",
                 "name": "When Sandra requests evaluation of 2 - 3",
-                "outcome": "SUCCESS",
+                "outcome": {
+                  "code": 64
+                },
                 "duration": 212,
+                "startedAt": "2026-08-20T12:43:18.844Z",
                 "children": [
                   {
+                    "type": "Task",
                     "name": "Sandra requests evaluation of \"2 - 3\"",
-                    "outcome": "SUCCESS",
+                    "outcome": {
+                      "code": 64
+                    },
                     "duration": 194,
+                    "startedAt": "2026-08-20T12:43:18.851Z",
                     "children": [
                       {
-                        "name": "Sandra sends a GET request to /v4?expr endpoint for URL-encoded expression: 2 - 3",
-                        "outcome": "SUCCESS",
-                        "duration": 172,
-                        "children": [],
                         "type": "Interaction",
+                        "name": "Sandra sends a GET request to /v4?expr endpoint for URL-encoded expression: 2 - 3",
+                        "outcome": {
+                          "code": 64
+                        },
+                        "duration": 172,
                         "startedAt": "2026-08-20T12:43:18.851Z",
+                        "children": [],
                         "location": {
                           "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
                           "line": 10,
                           "column": 27
                         },
-                        "artifacts": [
-                          {
-                            "path": "test-runs/3592/serenity-js-cucumber-template-1/artifact-get-http---api-mathjs-org-v4-expr-2-3-e245eaf780.json",
-                            "type": "screenshot"
-                          }
-                        ],
                         "restQuery": {
                           "method": "GET",
                           "url": "http://api.mathjs.org/v4?expr=2-3",
@@ -259,15 +270,23 @@ window.__SERENITY_REPORT_DATA__ = {
                           "statusCode": 200,
                           "responseHeaders": "access-control-allow-headers: Content-Type, X-Requested-With\naccess-control-allow-methods: GET, POST, OPTIONS\naccess-control-allow-origin: *\ncontent-length: 2\ncontent-type: text/html; charset=utf-8\ndate: Thu, 20 Aug 2026 12:43:18 GMT\netag: W/\"2-eYSwoOE5yrrbWvx3VtRz+zTSOBk\"\nnel: {\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}\nreport-to: {\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=TjEC8DcXP5nRB0Lvm3fw075Cf8Cf%2Fhlkt6PvgeSQgcc%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1787229798\"}],\"max_age\":3600}\nreporting-endpoints: heroku-nel=\"https://nel.heroku.com/reports?s=TjEC8DcXP5nRB0Lvm3fw075Cf8Cf%2Fhlkt6PvgeSQgcc%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1787229798\"\nserver: Heroku\nvary: Accept-Encoding\nvia: 1.1 heroku-router\nx-powered-by: Express\nx-ratelimit-limit: 1000000\nx-ratelimit-remaining: 999360\nx-ratelimit-reset: 1787305081\nconnection: close",
                           "responseBody": "-1"
-                        }
+                        },
+                        "artifacts": [
+                          {
+                            "path": "test-runs/3592/serenity-js-cucumber-template-1/artifact-get-http---api-mathjs-org-v4-expr-2-3-e245eaf780.json",
+                            "type": "screenshot"
+                          }
+                        ]
                       },
                       {
-                        "name": "Sandra ensures that the status of the last response does equal 200",
-                        "outcome": "SUCCESS",
-                        "duration": 1,
-                        "children": [],
                         "type": "Interaction",
+                        "name": "Sandra ensures that the status of the last response does equal 200",
+                        "outcome": {
+                          "code": 64
+                        },
+                        "duration": 1,
                         "startedAt": "2026-08-20T12:43:19.034Z",
+                        "children": [],
                         "location": {
                           "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
                           "line": 10,
@@ -275,8 +294,6 @@ window.__SERENITY_REPORT_DATA__ = {
                         }
                       }
                     ],
-                    "type": "Task",
-                    "startedAt": "2026-08-20T12:43:18.851Z",
                     "location": {
                       "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
                       "line": 10,
@@ -284,25 +301,29 @@ window.__SERENITY_REPORT_DATA__ = {
                     }
                   }
                 ],
-                "type": "Task",
-                "startedAt": "2026-08-20T12:43:18.844Z",
                 "location": {
                   "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/mathjs-api/expressions.feature",
                   "line": 15
                 }
               },
               {
+                "type": "Task",
                 "name": "Then she should get -1",
-                "outcome": "SUCCESS",
+                "outcome": {
+                  "code": 64
+                },
                 "duration": 15,
+                "startedAt": "2026-08-20T12:43:19.056Z",
                 "children": [
                   {
-                    "name": "Sandra ensures that the body of the last response does equal -1",
-                    "outcome": "SUCCESS",
-                    "duration": 1,
-                    "children": [],
                     "type": "Interaction",
+                    "name": "Sandra ensures that the body of the last response does equal -1",
+                    "outcome": {
+                      "code": 64
+                    },
+                    "duration": 1,
                     "startedAt": "2026-08-20T12:43:19.058Z",
+                    "children": [],
                     "location": {
                       "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
                       "line": 15,
@@ -310,8 +331,6 @@ window.__SERENITY_REPORT_DATA__ = {
                     }
                   }
                 ],
-                "type": "Task",
-                "startedAt": "2026-08-20T12:43:19.056Z",
                 "location": {
                   "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/mathjs-api/expressions.feature",
                   "line": 16
@@ -325,49 +344,57 @@ window.__SERENITY_REPORT_DATA__ = {
               "expression": "2 * 2 + 2",
               "expected_result": "6"
             },
-            "outcome": "SUCCESS",
+            "outcome": {
+              "code": 64
+            },
             "duration": 240,
             "activities": [
               {
-                "name": "Before",
-                "outcome": "SUCCESS",
-                "duration": 0,
-                "children": [],
                 "type": "Task",
+                "name": "Before",
+                "outcome": {
+                  "code": 64
+                },
+                "duration": 0,
                 "startedAt": "2026-08-20T12:43:19.086Z",
+                "children": [],
                 "location": {
                   "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/support/serenity.config.ts",
                   "line": 32
                 }
               },
               {
+                "type": "Task",
                 "name": "When Sandra requests evaluation of 2 * 2 + 2",
-                "outcome": "SUCCESS",
+                "outcome": {
+                  "code": 64
+                },
                 "duration": 214,
+                "startedAt": "2026-08-20T12:43:19.086Z",
                 "children": [
                   {
+                    "type": "Task",
                     "name": "Sandra requests evaluation of \"2 * 2 + 2\"",
-                    "outcome": "SUCCESS",
+                    "outcome": {
+                      "code": 64
+                    },
                     "duration": 197,
+                    "startedAt": "2026-08-20T12:43:19.092Z",
                     "children": [
                       {
-                        "name": "Sandra sends a GET request to /v4?expr endpoint for URL-encoded expression: 2 * 2 + 2",
-                        "outcome": "SUCCESS",
-                        "duration": 176,
-                        "children": [],
                         "type": "Interaction",
+                        "name": "Sandra sends a GET request to /v4?expr endpoint for URL-encoded expression: 2 * 2 + 2",
+                        "outcome": {
+                          "code": 64
+                        },
+                        "duration": 176,
                         "startedAt": "2026-08-20T12:43:19.092Z",
+                        "children": [],
                         "location": {
                           "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
                           "line": 10,
                           "column": 27
                         },
-                        "artifacts": [
-                          {
-                            "path": "test-runs/3592/serenity-js-cucumber-template-1/artifact-get-http---api-mathjs-org-v4-expr-2-2-2b2-e106329994.json",
-                            "type": "screenshot"
-                          }
-                        ],
                         "restQuery": {
                           "method": "GET",
                           "url": "http://api.mathjs.org/v4?expr=2*2%2B2",
@@ -375,15 +402,23 @@ window.__SERENITY_REPORT_DATA__ = {
                           "statusCode": 200,
                           "responseHeaders": "access-control-allow-headers: Content-Type, X-Requested-With\naccess-control-allow-methods: GET, POST, OPTIONS\naccess-control-allow-origin: *\ncontent-length: 1\ncontent-type: text/html; charset=utf-8\ndate: Thu, 20 Aug 2026 12:43:19 GMT\netag: W/\"1-wd/ZbuqMwrYnhSdbyjisJhJW4ng\"\nnel: {\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}\nreport-to: {\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=C4gLhNE3oSQB4DW9xBwsQPvwLiVQXRtUO3%2BOJ6Q1EhI%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1787229799\"}],\"max_age\":3600}\nreporting-endpoints: heroku-nel=\"https://nel.heroku.com/reports?s=C4gLhNE3oSQB4DW9xBwsQPvwLiVQXRtUO3%2BOJ6Q1EhI%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1787229799\"\nserver: Heroku\nvary: Accept-Encoding\nvia: 1.1 heroku-router\nx-powered-by: Express\nx-ratelimit-limit: 1000000\nx-ratelimit-remaining: 997446\nx-ratelimit-reset: 1787269013\nconnection: close",
                           "responseBody": "6"
-                        }
+                        },
+                        "artifacts": [
+                          {
+                            "path": "test-runs/3592/serenity-js-cucumber-template-1/artifact-get-http---api-mathjs-org-v4-expr-2-2-2b2-e106329994.json",
+                            "type": "screenshot"
+                          }
+                        ]
                       },
                       {
-                        "name": "Sandra ensures that the status of the last response does equal 200",
-                        "outcome": "SUCCESS",
-                        "duration": 1,
-                        "children": [],
                         "type": "Interaction",
+                        "name": "Sandra ensures that the status of the last response does equal 200",
+                        "outcome": {
+                          "code": 64
+                        },
+                        "duration": 1,
                         "startedAt": "2026-08-20T12:43:19.278Z",
+                        "children": [],
                         "location": {
                           "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
                           "line": 10,
@@ -391,8 +426,6 @@ window.__SERENITY_REPORT_DATA__ = {
                         }
                       }
                     ],
-                    "type": "Task",
-                    "startedAt": "2026-08-20T12:43:19.092Z",
                     "location": {
                       "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
                       "line": 10,
@@ -400,25 +433,29 @@ window.__SERENITY_REPORT_DATA__ = {
                     }
                   }
                 ],
-                "type": "Task",
-                "startedAt": "2026-08-20T12:43:19.086Z",
                 "location": {
                   "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/mathjs-api/expressions.feature",
                   "line": 15
                 }
               },
               {
+                "type": "Task",
                 "name": "Then she should get 6",
-                "outcome": "SUCCESS",
+                "outcome": {
+                  "code": 64
+                },
                 "duration": 13,
+                "startedAt": "2026-08-20T12:43:19.300Z",
                 "children": [
                   {
-                    "name": "Sandra ensures that the body of the last response does equal 6",
-                    "outcome": "SUCCESS",
-                    "duration": 1,
-                    "children": [],
                     "type": "Interaction",
+                    "name": "Sandra ensures that the body of the last response does equal 6",
+                    "outcome": {
+                      "code": 64
+                    },
+                    "duration": 1,
                     "startedAt": "2026-08-20T12:43:19.302Z",
+                    "children": [],
                     "location": {
                       "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
                       "line": 15,
@@ -426,8 +463,6 @@ window.__SERENITY_REPORT_DATA__ = {
                     }
                   }
                 ],
-                "type": "Task",
-                "startedAt": "2026-08-20T12:43:19.300Z",
                 "location": {
                   "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/mathjs-api/expressions.feature",
                   "line": 16
@@ -441,49 +476,57 @@ window.__SERENITY_REPORT_DATA__ = {
               "expression": "2 + 2 * 2",
               "expected_result": "6"
             },
-            "outcome": "SUCCESS",
+            "outcome": {
+              "code": 64
+            },
             "duration": 237,
             "activities": [
               {
-                "name": "Before",
-                "outcome": "SUCCESS",
-                "duration": 0,
-                "children": [],
                 "type": "Task",
+                "name": "Before",
+                "outcome": {
+                  "code": 64
+                },
+                "duration": 0,
                 "startedAt": "2026-08-20T12:43:19.328Z",
+                "children": [],
                 "location": {
                   "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/support/serenity.config.ts",
                   "line": 32
                 }
               },
               {
+                "type": "Task",
                 "name": "When Sandra requests evaluation of 2 + 2 * 2",
-                "outcome": "SUCCESS",
+                "outcome": {
+                  "code": 64
+                },
                 "duration": 212,
+                "startedAt": "2026-08-20T12:43:19.328Z",
                 "children": [
                   {
+                    "type": "Task",
                     "name": "Sandra requests evaluation of \"2 + 2 * 2\"",
-                    "outcome": "SUCCESS",
+                    "outcome": {
+                      "code": 64
+                    },
                     "duration": 197,
+                    "startedAt": "2026-08-20T12:43:19.333Z",
                     "children": [
                       {
-                        "name": "Sandra sends a GET request to /v4?expr endpoint for URL-encoded expression: 2 + 2 * 2",
-                        "outcome": "SUCCESS",
-                        "duration": 175,
-                        "children": [],
                         "type": "Interaction",
+                        "name": "Sandra sends a GET request to /v4?expr endpoint for URL-encoded expression: 2 + 2 * 2",
+                        "outcome": {
+                          "code": 64
+                        },
+                        "duration": 175,
                         "startedAt": "2026-08-20T12:43:19.333Z",
+                        "children": [],
                         "location": {
                           "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
                           "line": 10,
                           "column": 27
                         },
-                        "artifacts": [
-                          {
-                            "path": "test-runs/3592/serenity-js-cucumber-template-1/artifact-get-http---api-mathjs-org-v4-expr-2-2b2-2-ad36b1c4c7.json",
-                            "type": "screenshot"
-                          }
-                        ],
                         "restQuery": {
                           "method": "GET",
                           "url": "http://api.mathjs.org/v4?expr=2%2B2*2",
@@ -491,15 +534,23 @@ window.__SERENITY_REPORT_DATA__ = {
                           "statusCode": 200,
                           "responseHeaders": "access-control-allow-headers: Content-Type, X-Requested-With\naccess-control-allow-methods: GET, POST, OPTIONS\naccess-control-allow-origin: *\ncontent-length: 1\ncontent-type: text/html; charset=utf-8\ndate: Thu, 20 Aug 2026 12:43:19 GMT\netag: W/\"1-wd/ZbuqMwrYnhSdbyjisJhJW4ng\"\nnel: {\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}\nreport-to: {\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=C4gLhNE3oSQB4DW9xBwsQPvwLiVQXRtUO3%2BOJ6Q1EhI%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1787229799\"}],\"max_age\":3600}\nreporting-endpoints: heroku-nel=\"https://nel.heroku.com/reports?s=C4gLhNE3oSQB4DW9xBwsQPvwLiVQXRtUO3%2BOJ6Q1EhI%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1787229799\"\nserver: Heroku\nvary: Accept-Encoding\nvia: 1.1 heroku-router\nx-powered-by: Express\nx-ratelimit-limit: 1000000\nx-ratelimit-remaining: 997350\nx-ratelimit-reset: 1787267334\nconnection: close",
                           "responseBody": "6"
-                        }
+                        },
+                        "artifacts": [
+                          {
+                            "path": "test-runs/3592/serenity-js-cucumber-template-1/artifact-get-http---api-mathjs-org-v4-expr-2-2b2-2-ad36b1c4c7.json",
+                            "type": "screenshot"
+                          }
+                        ]
                       },
                       {
-                        "name": "Sandra ensures that the status of the last response does equal 200",
-                        "outcome": "SUCCESS",
-                        "duration": 1,
-                        "children": [],
                         "type": "Interaction",
+                        "name": "Sandra ensures that the status of the last response does equal 200",
+                        "outcome": {
+                          "code": 64
+                        },
+                        "duration": 1,
                         "startedAt": "2026-08-20T12:43:19.519Z",
+                        "children": [],
                         "location": {
                           "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
                           "line": 10,
@@ -507,8 +558,6 @@ window.__SERENITY_REPORT_DATA__ = {
                         }
                       }
                     ],
-                    "type": "Task",
-                    "startedAt": "2026-08-20T12:43:19.333Z",
                     "location": {
                       "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
                       "line": 10,
@@ -516,25 +565,29 @@ window.__SERENITY_REPORT_DATA__ = {
                     }
                   }
                 ],
-                "type": "Task",
-                "startedAt": "2026-08-20T12:43:19.328Z",
                 "location": {
                   "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/mathjs-api/expressions.feature",
                   "line": 15
                 }
               },
               {
+                "type": "Task",
                 "name": "Then she should get 6",
-                "outcome": "SUCCESS",
+                "outcome": {
+                  "code": 64
+                },
                 "duration": 13,
+                "startedAt": "2026-08-20T12:43:19.540Z",
                 "children": [
                   {
-                    "name": "Sandra ensures that the body of the last response does equal 6",
-                    "outcome": "SUCCESS",
-                    "duration": 0,
-                    "children": [],
                     "type": "Interaction",
+                    "name": "Sandra ensures that the body of the last response does equal 6",
+                    "outcome": {
+                      "code": 64
+                    },
+                    "duration": 0,
                     "startedAt": "2026-08-20T12:43:19.543Z",
+                    "children": [],
                     "location": {
                       "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
                       "line": 15,
@@ -542,8 +595,6 @@ window.__SERENITY_REPORT_DATA__ = {
                     }
                   }
                 ],
-                "type": "Task",
-                "startedAt": "2026-08-20T12:43:19.540Z",
                 "location": {
                   "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/mathjs-api/expressions.feature",
                   "line": 16
@@ -557,7 +608,9 @@ window.__SERENITY_REPORT_DATA__ = {
     {
       "name": "Multiple expressions",
       "category": "Expressions",
-      "outcome": "SUCCESS",
+      "outcome": {
+        "code": 64
+      },
       "duration": 241,
       "startedAt": "2026-08-20T12:43:19.566Z",
       "source": {
@@ -580,45 +633,51 @@ window.__SERENITY_REPORT_DATA__ = {
       ],
       "activities": [
         {
-          "name": "Before",
-          "outcome": "SUCCESS",
-          "duration": 1,
-          "children": [],
           "type": "Task",
+          "name": "Before",
+          "outcome": {
+            "code": 64
+          },
+          "duration": 1,
           "startedAt": "2026-08-20T12:43:19.566Z",
+          "children": [],
           "location": {
             "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/support/serenity.config.ts",
             "line": 32
           }
         },
         {
+          "type": "Task",
           "name": "When Sandra requests evaluation of:\n| expression |\n| 2 + 3      |\n| 2 - 3      |\n| 2 * 2 + 2  |\n| 2 + 2 * 2  |",
-          "outcome": "SUCCESS",
+          "outcome": {
+            "code": 64
+          },
           "duration": 209,
+          "startedAt": "2026-08-20T12:43:19.571Z",
           "children": [
             {
+              "type": "Task",
               "name": "Sandra requests evaluation of multiple expressions",
-              "outcome": "SUCCESS",
+              "outcome": {
+                "code": 64
+              },
               "duration": 193,
+              "startedAt": "2026-08-20T12:43:19.576Z",
               "children": [
                 {
-                  "name": "Sandra sends a POST request to '/v4'",
-                  "outcome": "SUCCESS",
-                  "duration": 171,
-                  "children": [],
                   "type": "Interaction",
+                  "name": "Sandra sends a POST request to '/v4'",
+                  "outcome": {
+                    "code": 64
+                  },
+                  "duration": 171,
                   "startedAt": "2026-08-20T12:43:19.576Z",
+                  "children": [],
                   "location": {
                     "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
                     "line": 20,
                     "column": 27
                   },
-                  "artifacts": [
-                    {
-                      "path": "test-runs/3592/serenity-js-cucumber-template-1/artifact-post-http---api-mathjs-org-v4-a91718eed9.json",
-                      "type": "screenshot"
-                    }
-                  ],
                   "restQuery": {
                     "method": "POST",
                     "url": "http://api.mathjs.org/v4",
@@ -627,15 +686,23 @@ window.__SERENITY_REPORT_DATA__ = {
                     "statusCode": 200,
                     "responseHeaders": "access-control-allow-headers: Content-Type, X-Requested-With\naccess-control-allow-methods: GET, POST, OPTIONS\naccess-control-allow-origin: *\ncontent-length: 42\ncontent-type: application/json; charset=utf-8\ndate: Thu, 20 Aug 2026 12:43:19 GMT\netag: W/\"2a-25tc5YISkPLz5nqHaq97u28qC20\"\nnel: {\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}\nreport-to: {\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=C4gLhNE3oSQB4DW9xBwsQPvwLiVQXRtUO3%2BOJ6Q1EhI%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1787229799\"}],\"max_age\":3600}\nreporting-endpoints: heroku-nel=\"https://nel.heroku.com/reports?s=C4gLhNE3oSQB4DW9xBwsQPvwLiVQXRtUO3%2BOJ6Q1EhI%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1787229799\"\nserver: Heroku\nvary: Accept-Encoding\nvia: 1.1 heroku-router\nx-powered-by: Express\nx-ratelimit-limit: 1000000\nx-ratelimit-remaining: 997445\nx-ratelimit-reset: 1787269013\nconnection: close",
                     "responseBody": "{\n    \"result\": [\n        \"5\",\n        \"-1\",\n        \"6\",\n        \"6\"\n    ],\n    \"error\": null\n}"
-                  }
+                  },
+                  "artifacts": [
+                    {
+                      "path": "test-runs/3592/serenity-js-cucumber-template-1/artifact-post-http---api-mathjs-org-v4-a91718eed9.json",
+                      "type": "screenshot"
+                    }
+                  ]
                 },
                 {
-                  "name": "Sandra ensures that the status of the last response does equal 200",
-                  "outcome": "SUCCESS",
-                  "duration": 1,
-                  "children": [],
                   "type": "Interaction",
+                  "name": "Sandra ensures that the status of the last response does equal 200",
+                  "outcome": {
+                    "code": 64
+                  },
+                  "duration": 1,
                   "startedAt": "2026-08-20T12:43:19.758Z",
+                  "children": [],
                   "location": {
                     "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
                     "line": 20,
@@ -643,8 +710,6 @@ window.__SERENITY_REPORT_DATA__ = {
                   }
                 }
               ],
-              "type": "Task",
-              "startedAt": "2026-08-20T12:43:19.576Z",
               "location": {
                 "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
                 "line": 20,
@@ -652,25 +717,29 @@ window.__SERENITY_REPORT_DATA__ = {
               }
             }
           ],
-          "type": "Task",
-          "startedAt": "2026-08-20T12:43:19.571Z",
           "location": {
             "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/mathjs-api/expressions.feature",
             "line": 34
           }
         },
         {
+          "type": "Task",
           "name": "Then she should get following results:\n| expected_result |\n| 5               |\n| -1              |\n| 6               |\n| 6               |",
-          "outcome": "SUCCESS",
+          "outcome": {
+            "code": 64
+          },
           "duration": 15,
+          "startedAt": "2026-08-20T12:43:19.781Z",
           "children": [
             {
-              "name": "Sandra ensures that the body of the last response does have property result that does equal [ \"5\", \"-1\", \"6\", \"6\" ]",
-              "outcome": "SUCCESS",
-              "duration": 1,
-              "children": [],
               "type": "Interaction",
+              "name": "Sandra ensures that the body of the last response does have property result that does equal [ \"5\", \"-1\", \"6\", \"6\" ]",
+              "outcome": {
+                "code": 64
+              },
+              "duration": 1,
               "startedAt": "2026-08-20T12:43:19.784Z",
+              "children": [],
               "location": {
                 "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
                 "line": 25,
@@ -678,246 +747,21 @@ window.__SERENITY_REPORT_DATA__ = {
               }
             }
           ],
-          "type": "Task",
-          "startedAt": "2026-08-20T12:43:19.781Z",
           "location": {
             "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/mathjs-api/expressions.feature",
             "line": 40
           }
         }
       ],
-      "executionHistory": [
+      "narrative": "[math.js](https://mathjs.org/) is available as a RESTful API at [api.mathjs.org](https://api.mathjs.org/).\n\nEvaluations can be done via GET or POST requests.\nThe duration per evaluation of this free service is limited to 10 seconds,\nwith a maximum of 10,000 requests per day.",
+      "description": "Requests to evaluate multiple expression should be sent to the [POST endpoint](https://api.mathjs.org/#post).",
+      "artifacts": [
         {
-          "outcome": "SUCCESS",
-          "run": "3590",
-          "timestamp": "2026-08-18T15:35:59.430Z",
-          "duration": 186,
-          "activities": [
-            {
-              "name": "Before",
-              "outcome": "SUCCESS",
-              "duration": 0,
-              "children": [],
-              "type": "Task",
-              "startedAt": "2026-08-18T15:35:59.613Z",
-              "location": {
-                "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/support/serenity.config.ts",
-                "line": 32
-              }
-            },
-            {
-              "name": "When Sandra requests evaluation of:\n| expression |\n| 2 + 3      |\n| 2 - 3      |\n| 2 * 2 + 2  |\n| 2 + 2 * 2  |",
-              "outcome": "SUCCESS",
-              "duration": 154,
-              "children": [
-                {
-                  "name": "Sandra requests evaluation of multiple expressions",
-                  "outcome": "SUCCESS",
-                  "duration": 139,
-                  "children": [
-                    {
-                      "name": "Sandra sends a POST request to '/v4'",
-                      "outcome": "SUCCESS",
-                      "duration": 116,
-                      "children": [],
-                      "type": "Interaction",
-                      "startedAt": "2026-08-18T15:35:59.622Z",
-                      "location": {
-                        "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
-                        "line": 20,
-                        "column": 27
-                      },
-                      "artifacts": [
-                        {
-                          "path": "test-runs/3590/serenity-js-cucumber-template-1/artifact-post-http---api-mathjs-org-v4-e11512a834.json",
-                          "type": "screenshot"
-                        }
-                      ],
-                      "restQuery": {
-                        "method": "POST",
-                        "url": "http://api.mathjs.org/v4",
-                        "requestHeaders": "Accept: application/json, text/plain, */*\nContent-Type: application/json\nUser-Agent: axios/1.19.0\nContent-Length: 50\nAccept-Encoding: gzip, compress, deflate, br",
-                        "requestBody": "{\"expr\":[\"2 + 3\",\"2 - 3\",\"2 * 2 + 2\",\"2 + 2 * 2\"]}",
-                        "statusCode": 200,
-                        "responseHeaders": "access-control-allow-headers: Content-Type, X-Requested-With\naccess-control-allow-methods: GET, POST, OPTIONS\naccess-control-allow-origin: *\ncontent-length: 42\ncontent-type: application/json; charset=utf-8\ndate: Tue, 18 Aug 2026 15:35:59 GMT\netag: W/\"2a-25tc5YISkPLz5nqHaq97u28qC20\"\nnel: {\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}\nreport-to: {\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=MF%2FL6Mpz7UeiyKWn5kq825jmxFvpLVaa0E106gwiUhM%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1787067359\"}],\"max_age\":3600}\nreporting-endpoints: heroku-nel=\"https://nel.heroku.com/reports?s=MF%2FL6Mpz7UeiyKWn5kq825jmxFvpLVaa0E106gwiUhM%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1787067359\"\nserver: Heroku\nvary: Accept-Encoding\nvia: 1.1 heroku-router\nx-powered-by: Express\nx-ratelimit-limit: 1000000\nx-ratelimit-remaining: 996057\nx-ratelimit-reset: 1787071847\nconnection: close",
-                        "responseBody": "{\n    \"result\": [\n        \"5\",\n        \"-1\",\n        \"6\",\n        \"6\"\n    ],\n    \"error\": null\n}"
-                      }
-                    },
-                    {
-                      "name": "Sandra ensures that the status of the last response does equal 200",
-                      "outcome": "SUCCESS",
-                      "duration": 1,
-                      "children": [],
-                      "type": "Interaction",
-                      "startedAt": "2026-08-18T15:35:59.749Z",
-                      "location": {
-                        "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
-                        "line": 20,
-                        "column": 27
-                      }
-                    }
-                  ],
-                  "type": "Task",
-                  "startedAt": "2026-08-18T15:35:59.621Z",
-                  "location": {
-                    "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
-                    "line": 20,
-                    "column": 27
-                  }
-                }
-              ],
-              "type": "Task",
-              "startedAt": "2026-08-18T15:35:59.617Z",
-              "location": {
-                "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/mathjs-api/expressions.feature",
-                "line": 34
-              }
-            },
-            {
-              "name": "Then she should get following results:\n| expected_result |\n| 5               |\n| -1              |\n| 6               |\n| 6               |",
-              "outcome": "SUCCESS",
-              "duration": 15,
-              "children": [
-                {
-                  "name": "Sandra ensures that the body of the last response does have property result that does equal [ \"5\", \"-1\", \"6\", \"6\" ]",
-                  "outcome": "SUCCESS",
-                  "duration": 1,
-                  "children": [],
-                  "type": "Interaction",
-                  "startedAt": "2026-08-18T15:35:59.775Z",
-                  "location": {
-                    "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
-                    "line": 25,
-                    "column": 16
-                  }
-                }
-              ],
-              "type": "Task",
-              "startedAt": "2026-08-18T15:35:59.772Z",
-              "location": {
-                "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/mathjs-api/expressions.feature",
-                "line": 40
-              }
-            }
-          ]
-        },
-        {
-          "outcome": "SUCCESS",
-          "run": "3592",
-          "timestamp": "2026-08-20T12:43:19.327Z",
-          "duration": 241,
-          "activities": [
-            {
-              "name": "Before",
-              "outcome": "SUCCESS",
-              "duration": 1,
-              "children": [],
-              "type": "Task",
-              "startedAt": "2026-08-20T12:43:19.566Z",
-              "location": {
-                "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/support/serenity.config.ts",
-                "line": 32
-              }
-            },
-            {
-              "name": "When Sandra requests evaluation of:\n| expression |\n| 2 + 3      |\n| 2 - 3      |\n| 2 * 2 + 2  |\n| 2 + 2 * 2  |",
-              "outcome": "SUCCESS",
-              "duration": 209,
-              "children": [
-                {
-                  "name": "Sandra requests evaluation of multiple expressions",
-                  "outcome": "SUCCESS",
-                  "duration": 193,
-                  "children": [
-                    {
-                      "name": "Sandra sends a POST request to '/v4'",
-                      "outcome": "SUCCESS",
-                      "duration": 171,
-                      "children": [],
-                      "type": "Interaction",
-                      "startedAt": "2026-08-20T12:43:19.576Z",
-                      "location": {
-                        "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
-                        "line": 20,
-                        "column": 27
-                      },
-                      "artifacts": [
-                        {
-                          "path": "test-runs/3592/serenity-js-cucumber-template-1/artifact-post-http---api-mathjs-org-v4-a91718eed9.json",
-                          "type": "screenshot"
-                        }
-                      ],
-                      "restQuery": {
-                        "method": "POST",
-                        "url": "http://api.mathjs.org/v4",
-                        "requestHeaders": "Accept: application/json, text/plain, */*\nContent-Type: application/json\nUser-Agent: axios/1.19.0\nContent-Length: 50\nAccept-Encoding: gzip, compress, deflate, br",
-                        "requestBody": "{\"expr\":[\"2 + 3\",\"2 - 3\",\"2 * 2 + 2\",\"2 + 2 * 2\"]}",
-                        "statusCode": 200,
-                        "responseHeaders": "access-control-allow-headers: Content-Type, X-Requested-With\naccess-control-allow-methods: GET, POST, OPTIONS\naccess-control-allow-origin: *\ncontent-length: 42\ncontent-type: application/json; charset=utf-8\ndate: Thu, 20 Aug 2026 12:43:19 GMT\netag: W/\"2a-25tc5YISkPLz5nqHaq97u28qC20\"\nnel: {\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}\nreport-to: {\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=C4gLhNE3oSQB4DW9xBwsQPvwLiVQXRtUO3%2BOJ6Q1EhI%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1787229799\"}],\"max_age\":3600}\nreporting-endpoints: heroku-nel=\"https://nel.heroku.com/reports?s=C4gLhNE3oSQB4DW9xBwsQPvwLiVQXRtUO3%2BOJ6Q1EhI%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1787229799\"\nserver: Heroku\nvary: Accept-Encoding\nvia: 1.1 heroku-router\nx-powered-by: Express\nx-ratelimit-limit: 1000000\nx-ratelimit-remaining: 997445\nx-ratelimit-reset: 1787269013\nconnection: close",
-                        "responseBody": "{\n    \"result\": [\n        \"5\",\n        \"-1\",\n        \"6\",\n        \"6\"\n    ],\n    \"error\": null\n}"
-                      }
-                    },
-                    {
-                      "name": "Sandra ensures that the status of the last response does equal 200",
-                      "outcome": "SUCCESS",
-                      "duration": 1,
-                      "children": [],
-                      "type": "Interaction",
-                      "startedAt": "2026-08-20T12:43:19.758Z",
-                      "location": {
-                        "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
-                        "line": 20,
-                        "column": 27
-                      }
-                    }
-                  ],
-                  "type": "Task",
-                  "startedAt": "2026-08-20T12:43:19.576Z",
-                  "location": {
-                    "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
-                    "line": 20,
-                    "column": 27
-                  }
-                }
-              ],
-              "type": "Task",
-              "startedAt": "2026-08-20T12:43:19.571Z",
-              "location": {
-                "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/mathjs-api/expressions.feature",
-                "line": 34
-              }
-            },
-            {
-              "name": "Then she should get following results:\n| expected_result |\n| 5               |\n| -1              |\n| 6               |\n| 6               |",
-              "outcome": "SUCCESS",
-              "duration": 15,
-              "children": [
-                {
-                  "name": "Sandra ensures that the body of the last response does have property result that does equal [ \"5\", \"-1\", \"6\", \"6\" ]",
-                  "outcome": "SUCCESS",
-                  "duration": 1,
-                  "children": [],
-                  "type": "Interaction",
-                  "startedAt": "2026-08-20T12:43:19.784Z",
-                  "location": {
-                    "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/step_definitions/expressions.steps.ts",
-                    "line": 25,
-                    "column": 16
-                  }
-                }
-              ],
-              "type": "Task",
-              "startedAt": "2026-08-20T12:43:19.781Z",
-              "location": {
-                "path": "/__w/serenity-js-cucumber-template/serenity-js-cucumber-template/features/mathjs-api/expressions.feature",
-                "line": 40
-              }
-            }
-          ]
+          "path": "test-runs/3592/serenity-js-cucumber-template-1/artifact-post-http---api-mathjs-org-v4-a91718eed9.json",
+          "type": "screenshot",
+          "activityId": "xksy2mitbm7javw2fwlhlx3s"
         }
       ],
-      "narrative": "<p><a href=\"https://mathjs.org/\">math.js</a> is available as a RESTful API at <a href=\"https://api.mathjs.org/\">api.mathjs.org</a>.</p>\n<p>Evaluations can be done via GET or POST requests.\nThe duration per evaluation of this free service is limited to 10 seconds,\nwith a maximum of 10,000 requests per day.</p>\n",
-      "description": "<p>Requests to evaluate multiple expression should be sent to the <a href=\"https://api.mathjs.org/#post\">POST endpoint</a>.</p>\n",
       "cast": [
         {
           "name": "Sandra",
@@ -944,89 +788,24 @@ window.__SERENITY_REPORT_DATA__ = {
       ]
     }
   ],
-  "history": [
-    {
-      "timestamp": "2026-08-18T15:35:59.430Z",
-      "duration": 1067,
-      "outcomes": {
-        "passed": 2,
-        "failed": 0,
-        "pending": 0,
-        "skipped": 0,
-        "compromised": 0,
-        "error": 0
-      },
-      "label": "3590",
-      "slowest": 1067,
-      "fastest": 186,
-      "average": 627,
-      "commit": "786b4a795f7686592bcad93ebcc0be89a6272a2d",
-      "branch": "main",
-      "ciJobUrl": "https://github.com/serenity-js/serenity-js-cucumber-template/actions/runs/32155269801",
-      "repositoryUrl": "https://github.com/serenity-js/serenity-js-cucumber-template",
-      "score": {
-        "confidence": 100,
-        "passRate": 100,
-        "consistency": 100,
-        "completeness": 100
-      }
-    },
-    {
-      "timestamp": "2026-08-20T12:43:19.327Z",
-      "duration": 1243,
-      "outcomes": {
-        "passed": 2,
-        "failed": 0,
-        "pending": 0,
-        "skipped": 0,
-        "compromised": 0,
-        "error": 0
-      },
-      "label": "3592",
-      "slowest": 1243,
-      "fastest": 241,
-      "average": 742,
-      "commit": "53bb00fec6a6785c7fbdb00237d4da182e035802",
-      "branch": "main",
-      "ciJobUrl": "https://github.com/serenity-js/serenity-js-cucumber-template/actions/runs/32370212205",
-      "repositoryUrl": "https://github.com/serenity-js/serenity-js-cucumber-template",
-      "score": {
-        "confidence": 100,
-        "passRate": 100,
-        "consistency": 100,
-        "completeness": 100
-      }
-    }
-  ],
   "tags": [
     {
       "type": "capability",
-      "name": "Mathjs-api",
-      "scenarioCount": 2,
-      "passed": 2,
-      "failed": 0,
-      "skipped": 0
+      "name": "Mathjs-api"
     },
     {
       "type": "feature",
-      "name": "Expressions",
-      "scenarioCount": 2,
-      "passed": 2,
-      "failed": 0,
-      "skipped": 0
+      "name": "Expressions"
     },
     {
       "type": "module",
-      "name": "serenity-js-cucumber-template",
-      "scenarioCount": 2,
-      "passed": 2,
-      "failed": 0,
-      "skipped": 0
+      "name": "serenity-js-cucumber-template"
     }
   ],
-  "inconsistentTests": [],
-  "newFailures": [],
-  "newPasses": [],
+  "testRunner": {
+    "name": "Cucumber",
+    "version": "13.2.1"
+  },
   "systemContext": {
     "nodeVersion": "v24.19.0",
     "os": {
@@ -1035,12 +814,7 @@ window.__SERENITY_REPORT_DATA__ = {
       "arch": "x64"
     },
     "serenityVersion": "3.45.7",
-    "testRunner": {
-      "name": "Cucumber",
-      "version": "13.2.1"
-    },
-    "browsers": [],
-    "ci": {
+    "runtime": {
       "provider": "GitHub Actions",
       "buildNumber": "3592",
       "branch": "main",
@@ -1055,85 +829,7 @@ window.__SERENITY_REPORT_DATA__ = {
     "projectName": "@serenity-js/serenity-js-cucumber-template",
     "packageManager": "npm"
   },
-  "capabilities": {
-    "type": "directory",
-    "name": "features",
-    "outcomes": {
-      "passed": 2,
-      "failed": 0,
-      "pending": 0,
-      "skipped": 0,
-      "compromised": 0,
-      "error": 0
-    },
-    "scenarioCount": 2,
-    "children": [
-      {
-        "type": "directory",
-        "name": "mathjs-api",
-        "outcomes": {
-          "passed": 2,
-          "failed": 0,
-          "pending": 0,
-          "skipped": 0,
-          "compromised": 0,
-          "error": 0
-        },
-        "scenarioCount": 2,
-        "children": [
-          {
-            "type": "file",
-            "name": "expressions",
-            "outcomes": {
-              "passed": 2,
-              "failed": 0,
-              "pending": 0,
-              "skipped": 0,
-              "compromised": 0,
-              "error": 0
-            },
-            "scenarioCount": 2,
-            "scenarios": [
-              {
-                "name": "Basic expressions",
-                "outcome": "SUCCESS",
-                "executionHistory": [
-                  "SUCCESS",
-                  "SUCCESS"
-                ]
-              },
-              {
-                "name": "Multiple expressions",
-                "outcome": "SUCCESS",
-                "executionHistory": [
-                  "SUCCESS",
-                  "SUCCESS"
-                ]
-              }
-            ],
-            "narrative": "[math.js](https://mathjs.org/) is available as a RESTful API at [api.mathjs.org](https://api.mathjs.org/).\n\nEvaluations can be done via GET or POST requests.\nThe duration per evaluation of this free service is limited to 10 seconds,\nwith a maximum of 10,000 requests per day.",
-            "score": {
-              "confidence": 100,
-              "passRate": 100,
-              "completeness": 100,
-              "consistency": 100
-            }
-          }
-        ],
-        "score": {
-          "confidence": 100,
-          "passRate": 100,
-          "completeness": 100,
-          "consistency": 100
-        }
-      }
-    ],
-    "score": {
-      "confidence": 100,
-      "passRate": 100,
-      "completeness": 100,
-      "consistency": 100
-    }
-  },
-  "specDirectory": "features"
-};
+  "testRunId": "3592",
+  "moduleId": "serenity-js-cucumber-template",
+  "attempt": 1
+}
